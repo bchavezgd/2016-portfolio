@@ -1,0 +1,23 @@
+{
+  "name": "bchavez_portfolio",
+  "version": "1.0.0",
+  "description": "just a wordpress portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "responsive",
+    "portfolio"
+  ],
+  "author": "brian chavez",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "cssnano": "^3.5.2",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5"
+  }
+}
