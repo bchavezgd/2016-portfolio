@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font__header;
+  letter-spacing: 0.65px;
+	clear: both;
+}
+.site-title {
+  line-height: 1.0;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

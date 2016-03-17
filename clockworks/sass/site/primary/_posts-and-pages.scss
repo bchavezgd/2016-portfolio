@@ -1,9 +1,9 @@
-.sticky {
-	display: block;
-}
+@import "sticky";
+@import "entry";
 
 .hentry {
-	margin: 0 0 1.5em;
+  margin: $font__line-height-body * 1em;
+
 }
 
 .byline,

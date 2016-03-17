@@ -1,5 +1,6 @@
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em * $font__line-height-body;
+  max-width: 66ch;
 }
 
 dfn, cite, em, i {
@@ -19,10 +20,11 @@ pre {
 	font-family: $font__pre;
 	@include font-size(0.9375);
 	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
+  color: $color__gray_18p;
+	margin-bottom: 1em * $font__line-height-pre;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1em * $font__line-height-pre;
 }
 
 code, kbd, tt, var {

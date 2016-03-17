@@ -64,9 +64,6 @@ function bchavez_portfolio_setup() {
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
 		'quote',
 		'link',
 	) );
@@ -88,7 +85,7 @@ add_action( 'after_setup_theme', 'bchavez_portfolio_setup' );
  * @global int $content_width
  */
 function bchavez_portfolio_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'bchavez_portfolio_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'bchavez_portfolio_content_width', 700 );
 }
 add_action( 'after_setup_theme', 'bchavez_portfolio_content_width', 0 );
 

@@ -1,0 +1,20 @@
+// header
+.site-header
+  padding: ($font__line-height-body * 1em) ($font__line-height-body * 2em)
+  background: $color__text-main
+  color: $color__gray_18p
+  height: auto
+  a
+    color: $color__gray_18p
+    &:visited
+      color: darken($color__gray_18p, 15%)
+      font-weight: 200
+    &:hover,
+    &:focus,
+    &:active
+      color: white
+    &:focus
+      outline: thin dotted
+    &:hover,
+    &:active
+      outline: 0

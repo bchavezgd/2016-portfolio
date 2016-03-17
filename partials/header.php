@@ -30,6 +30,9 @@ this is the header  stuff
       <?php esc_html_e( 'Primary Menu', 'bchavez_portfolio' ); ?>
     </button>
     <?php
-      wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+      wp_nav_menu( array(
+        'theme_location'  => 'primary',
+        'menu_id'         => 'primary-menu'
+      ) );
     ?>
 </nav><!-- #site-navigation --> </header><!-- #masthead -->
