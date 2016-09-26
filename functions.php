@@ -41,6 +41,7 @@ function bchavez_portfolio_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size('loop', 360);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

@@ -1,5 +1,5 @@
 /*!
-Theme Name: bchavez
+Theme Name: bchavez 2017
 Theme URI: http://underscores.me/
 Author: Brian Chavez
 Author URI: http://www.briandesignworks.com
@@ -86,6 +86,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
+
+/*--------------------------------------------------------------
+# layout
+--------------------------------------------------------------*/
+@import "layout/content-sidebar";
+// @import "layout/sidebar-content";
+
 
 /*--------------------------------------------------------------
 # Widgets

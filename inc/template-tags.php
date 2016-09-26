@@ -12,6 +12,7 @@ if ( ! function_exists( 'bchavez_portfolio_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function bchavez_portfolio_posted_on() {
+	if ( get_post_type() === 'post' ) :
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -34,8 +35,8 @@ function bchavez_portfolio_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline  . '</span>'; // WPCS: XSS OK.
+endif;
 }
 endif;
 
@@ -119,3 +120,15 @@ function bchavez_portfolio_category_transient_flusher() {
 }
 add_action( 'edit_category', 'bchavez_portfolio_category_transient_flusher' );
 add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
+
+function bchavez_post_hero() {
+	if (has_post_thumbnail()) {
+		echo '<header class="entry-header hero" style="background-image: url(';
+		 the_post_thumbnail_url();
+		echo ');">';
+} else {
+		echo '<header class="entry-header">';
+	};
+	the_title( '<h1 class="entry-title">', '</h1>' );
+	echo "</header><!-- .entry-header -->";
+}

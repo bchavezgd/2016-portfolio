@@ -2,7 +2,7 @@
 @import "entry";
 
 .hentry {
-  margin: $font__line-height-body * 1em;
+  // margin: $font__line-height-body * 1em;
 
 }
 
@@ -19,10 +19,34 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	// margin-bottom: 1.25rem;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+article {
+    width: 100%;
+    margin: 0 auto 1.25rem 0;
+    p {
+      max-width: 66ch;
+    }
+
+}
+
+.hero {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .entry-title {
+    @include rhythm__padding(1, 2, 1, 2);
+    background-color: fade-out($color__gray_18p, 0.30);
+    border: 2px solid;
+  }
+
 }

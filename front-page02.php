@@ -15,8 +15,11 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+		<p>
+			this is the front-page.php file.
+		</p>
 		<main id="main" class="site-main" role="main">
-      <?php 
+      <?php
        if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
