@@ -14,33 +14,36 @@
 
 		<?php
 		$permalink = esc_url( get_permalink() ) ;
-		// bchavez_post_hero();
-		if( has_post_thumbnail() ) :
+		if( has_post_thumbnail() ) {
 			echo '<div class="entry-meta">';
-				if ( is_single() ) {
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				} else {
-					the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
-				}
-				echo '</div><!-- .entry-meta -->';
-			else :
-
-		echo '<div class="entry-meta alignleft">';
-			if ( is_single() ) {
+			if( is_sticky() ){
+				the_post_thumbnail('full');
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() )  . '" rel="bookmark">', '</a></h2>' );
+				bchavez_portfolio_posted_on();
+			} elseif ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
+				bchavez_portfolio_posted_on();
 			} else {
 				the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
-			}
+				bchavez_portfolio_posted_on();
+			};
 			echo '</div><!-- .entry-meta -->';
-
-
- endif; ?>
-
+		} else {
+				echo '<div class="entry-meta alignleft">';
+				if ( is_single() ) {
+					the_title( '<h1 class="entry-title">', '</h1>' );
+					bchavez_portfolio_posted_on();
+				} else {
+					the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
+					bchavez_portfolio_posted_on();
+				}
+				echo '</div><!-- .entry-meta -->';}
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
-		if( has_post_thumbnail() ) {
+		if( !is_sticky() && has_post_thumbnail() ) {
 			echo '<figure><a href="' . $permalink . '">';
 			the_post_thumbnail('loop');
 			echo '</a></figure>';
@@ -67,7 +70,7 @@
 
 	<footer class="entry-footer">
 		<?php
-		bchavez_portfolio_posted_on();
+
 		bchavez_portfolio_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

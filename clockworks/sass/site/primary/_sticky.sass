@@ -4,22 +4,13 @@
 // modifier
 
 .sticky
-  display: block
   +trailer()
-  //+rhythm__padding(1, 2, 1, 2)
   max-width: 100%
-  //background: $color__background-ins
   .entry-meta
-    position: absolute
-    bottom: 4rem * $font__line-height-body
-    right: 0
-    +rhythm__padding()
-    // margin: 0 1rem
-    background-color: fade-out($color__background-body, .20)
-    min-width: 60%
-    max-width: 85%
-    // min-height: 4rem * $font__line-height-body
-
-    display: flex
-    justify-content: space-between
-    align-items: baseline
+    position: relative
+    .entry-title
+      position: absolute
+      bottom: 2rem
+      padding: 1rem 2rem
+      background-color: $color__background-body
+      right: 0

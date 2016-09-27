@@ -8,14 +8,14 @@ var gulp = require('gulp'),
 
 	/* path variables */
 	src = './clockworks',
-  	sassSrc = './clockworks/sass/**/*',
+  	sassSrc = './clockworks/sass/',
 	dist = './';
 
 // defining tasks
 // gulp.task('default', ['sass']);
 
 gulp.task('sass', function () {
-	gulp.src( sassSrc )
+	gulp.src( sassSrc + 'style.scss')
     .pipe(
     	sass({
 	      /* options */
@@ -35,6 +35,6 @@ gulp.task('sass', function () {
 
 gulp.task('default', function () {
 
-    gulp.watch( sassSrc, ['sass']);
+    gulp.watch( sassSrc + "**/*", ['sass']);
 
 });

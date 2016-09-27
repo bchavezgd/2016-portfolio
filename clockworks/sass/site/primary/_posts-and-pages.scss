@@ -3,7 +3,7 @@
 
 .hentry {
   // margin: $font__line-height-body * 1em;
-
+  @include trailer(6);
 }
 
 .byline,
@@ -32,6 +32,9 @@ article {
     p {
       max-width: 66ch;
     }
+
+}
+.home article {
 
 }
 
