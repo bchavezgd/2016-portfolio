@@ -26,14 +26,24 @@ function bchavez_portfolio_posted_on() {
 		esc_html_x( 'Posted on %s', 'post date', 'bchavez_portfolio' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
+
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+endif;
+}
+endif;
+/* end posted on */
+
+/* byline changes. */
+function bchavez_portfolio_byline() {
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'bchavez_portfolio' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline  . '</span>'; // WPCS: XSS OK.
-endif;
+
+	echo '<span class="byline"> ' . $byline  . '</span>';
 }
-endif;
+/* end byline */
+
 if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
@@ -107,11 +117,12 @@ function bchavez_portfolio_category_transient_flusher() {
 add_action( 'edit_category', 'bchavez_portfolio_category_transient_flusher' );
 add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
 
+/* using to insert post thumbnail in to a background of the post header on a page */
 function bchavez_post_hero() {
 	if (has_post_thumbnail()) {
-		echo '<header class="entry-header hero" style="background-image: url(';
-		 the_post_thumbnail_url();
-		echo ');">';
+		echo "<header class=\"entry-header hero\" style=\"background-image: url(" ;
+		esc_url(the_post_thumbnail_url());
+		echo " );\">";
 } else {
 		echo '<header class="entry-header">';
 	};

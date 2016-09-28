@@ -70,7 +70,7 @@
 
 	<footer class="entry-footer">
 		<?php
-
+		bchavez_portfolio_byline();
 		bchavez_portfolio_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
