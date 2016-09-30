@@ -15,14 +15,14 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID() ?>" <?php post_class(); '>';
-				echo '<header class="entry-header clear">';
-				$permalink = esc_url( get_permalink() ) ;
-				bchavez_post_hero();
-				echo '</header><!-- .entry-header -->
-					<div class="entry-content">
-					<section>';
+		<article id="post-<?php the_ID() ?>" <?php post_class(); ?>>
 
+				<header class="entry-header clear">
+					<?php bchavez_post_hero(); ?>
+				</header><!-- .entry-header -->
+					<div class="entry-content">
+					<section>
+				<?php
 					the_content( sprintf(
 						/* translators: %s: Name of current post. */
 						wp_kses(
@@ -37,23 +37,28 @@ get_header(); ?>
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bchavez_portfolio' ),
 						'after'  => '</div>',
 					) );
-			echo '</div><!-- .entry-content -->
+					?>
+			</div><!-- .entry-content -->
 					<footer class="entry-footer">
-					<div class="entry-meta"';
+					<div class="entry-meta">
+						<?php
 				bchavez_portfolio_posted_on();
 				bchavez_portfolio_entry_footer();
-				echo '</div>';
-				the_post_navigation();
-			echo '</footer><!-- .entry-footer -->
-		</article><!-- #post-## -->';
+				?>
+				</div>
+				<?php the_post_navigation(); ?>
+			</footer><!-- .entry-footer -->
+		</article><!-- #post-## -->
 
-
+		<?php
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) { comments_template(); }
 
 		endwhile; // End of the loop.
+		?>
 
-		echo '</main><!-- #main --></div><!-- #primary -->';
-
+		</main><!-- #main -->
+	</div><!-- #primary -->
+<?php
 get_sidebar();
 get_footer();

@@ -59,7 +59,7 @@ function bchavez_portfolio_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bchavez_portfolio' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bchavez_portfolio' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'bchavez_portfolio' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {

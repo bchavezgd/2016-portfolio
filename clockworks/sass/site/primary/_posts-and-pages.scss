@@ -19,7 +19,9 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	// margin-bottom: 1.25rem;
+  padding-bottom: 1em * $font__line-height-body;
+  @include trailer(1);
+  border-bottom: 1px solid $color__gray_18p;
 }
 
 .page-links {
@@ -34,14 +36,10 @@ article {
     }
 
 }
-.home article {
-
-}
 
 .hero {
   @include aspect-ratio(16, 9);
   width: 100%;
-  // height: 80vh;
   background-size: cover;
   background-position: center top;
   display: flex;
