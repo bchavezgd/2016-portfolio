@@ -12,6 +12,17 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+blockquote {
+	font-size: 2em;
+	margin: 0;
+	font-weight: 700;
+	background: $color__gray_18p;
+	padding: 1em 2em;
+	color: $color__gray_50p;
+	line-height: 1;
+	letter-spacing: 0.04em;
+}
+
 blockquote, q {
 	quotes: "" "";
 

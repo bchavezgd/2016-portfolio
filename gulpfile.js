@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('autoprefixer'),
 	cssnano = require('cssnano'),
 	watch = require('gulp-watch'),
+	livereload = require('gulp-livereload'),
 
 	/* path variables */
 	src = './clockworks',
@@ -31,10 +32,11 @@ gulp.task('sass', function () {
       })
     ]))
     .pipe( gulp.dest( dist ) )
+		.pipe(livereload())
 });
 
 gulp.task('default', function () {
-
+		livereload.listen();
     gulp.watch( sassSrc + "**/*", ['sass']);
 
 });
