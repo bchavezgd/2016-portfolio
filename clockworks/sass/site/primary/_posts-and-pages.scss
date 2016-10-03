@@ -17,12 +17,14 @@
 }
 
 .page-content,
-.entry-content,
+.single .entry-content,
 .entry-summary {
   padding-bottom: 1em * $font__line-height-body;
   @include trailer(1);
   border-bottom: 1px solid $color__gray_18p;
 }
+
+
 
 .page-links {
 	clear: both;
@@ -30,13 +32,13 @@
 }
 article {
     width: 100%;
-    margin: 0 auto 1.25rem 0;
-    p {
-      max-width: 66ch;
-    }
-
+    // margin: 0 auto 1.25rem 0;
+    @include trailer(); 
 }
 
+.single p {
+  max-width: 66ch;
+}
 .hero {
   @include aspect-ratio(16, 9);
   width: 100%;

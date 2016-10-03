@@ -12,6 +12,9 @@
 <article id="post-<?php the_ID(); ?>"<?php post_class(); ?>>
 	<?php bchavez_post_hero(); ?>
 	<div class="entry-content">
+		<section>
+
+
 		<?php
 			the_content();
 			wp_link_pages( array(
@@ -19,6 +22,7 @@
 				'after'  => '</div>',
 			) );
 		?>
+		</section>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
 		<?php

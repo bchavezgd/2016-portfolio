@@ -31,6 +31,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Links
 	## Menus
 # Accessibility
+# Flex Classes
 # Alignments
 # Clearings
 # Widgets
@@ -76,6 +77,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 --------------------------------------------------------------*/
 @import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Flex classes
+--------------------------------------------------------------*/
+@import "layout/flex";
 
 /*--------------------------------------------------------------
 # Alignments

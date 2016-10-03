@@ -8,8 +8,11 @@
   &-footer
     +trailer()
     .entry-meta
-      // +flex--rows()
       +trailer()
+      border-bottom: 1px solid $color__gray_18p
+      justify-content: space-around
+      > .flex
+        +trailer(1)
       > span
         padding: 0 2ch
         &:first-of-type

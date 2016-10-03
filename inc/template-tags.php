@@ -48,35 +48,7 @@ if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function bchavez_portfolio_entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'bchavez_portfolio' ) );
-		if ( $categories_list && bchavez_portfolio_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bchavez_portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bchavez_portfolio' ) );
-		if ( $tags_list ) {
-			printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'bchavez_portfolio' ) . '</div>', $tags_list ); // WPCS: XSS OK.
-		}
-	}
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'bchavez_portfolio' ), esc_html__( '1 Comment', 'bchavez_portfolio' ), esc_html__( '% Comments', 'bchavez_portfolio' ) );
-		echo '</span>';
-	}
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'bchavez_portfolio' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
-}
+function bchavez_portfolio_entry_footer() {}
 endif;
 /**
  * Returns true if a blog has more than 1 category.
@@ -121,11 +93,53 @@ add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
 function bchavez_post_hero() {
 	if (has_post_thumbnail()) {
 		echo "<header class=\"entry-header hero\" style=\"background-image: url(" ;
-		esc_url(the_post_thumbnail_url());
+		esc_url( the_post_thumbnail_url() );
 		echo " );\">";
 } else {
 		echo '<header class="entry-header">';
 	};
 	the_title( '<h1 class="entry-title">', '</h1>' );
 	echo "</header><!-- .entry-header -->";
+}
+
+/* seperating category and tags list for better styling options. */
+/* translators: used between list items, there is a space after the comma */
+function bchavez_portfolio_categories_list() {
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		$categories_list = get_the_category_list( esc_html__( ', ', 'bchavez_portfolio' ) );
+		if ( $categories_list && bchavez_portfolio_categorized_blog() ) {
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bchavez_portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		}
+	}
+}
+function bchavez_portfolio_tag_list() {
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bchavez_portfolio' ) );
+		if ( $tags_list ) {
+			printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'bchavez_portfolio' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+		}
+	}
+}
+
+function bchavez_portfolio_comments_link() {
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( 'Leave a comment', 'bchavez_portfolio' ), esc_html__( '1 Comment', 'bchavez_portfolio' ), esc_html__( '% Comments', 'bchavez_portfolio' ) );
+		echo '</span>';
+	}
+}
+
+function bchavez_portfolio_edit_link() {
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			esc_html__( 'Edit %s', 'bchavez_portfolio' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		),
+		'<span class="edit-link">',
+		'</span>'
+	);
 }

@@ -41,11 +41,22 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 					<footer class="entry-footer">
 					<div class="entry-meta">
-						<?php
-				bchavez_portfolio_posted_on();
-				bchavez_portfolio_entry_footer();
-				?>
-				</div>
+						<div class="flex flex-row flex-just-between">
+							<?php bchavez_portfolio_posted_on(); ?>
+							<?php bchavez_portfolio_categories_list(); ?>
+						</div>
+						<?php if ( 'post' === get_post_type() )  :?>
+						<div class="flex flex-row flex-just-between">
+							<?php
+								bchavez_portfolio_tag_list();
+								bchavez_portfolio_comments_link();
+								bchavez_portfolio_edit_link();
+								?>
+						</div>
+					<?php endif; ?>
+
+					</div>
+					<!-- end .entry-meta -->
 				<?php the_post_navigation(); ?>
 			</footer><!-- .entry-footer -->
 		</article><!-- #post-## -->
