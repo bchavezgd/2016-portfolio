@@ -11,6 +11,7 @@
  *
  * @package bchavez
  *
+ * Template Name: Full Width
  * body class -> page
  */
 

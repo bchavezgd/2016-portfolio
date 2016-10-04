@@ -23,3 +23,12 @@ Due by 2016-11-14
     - company
     - description
 - use custom code in content.
+
+## go full width
+
+- created separate template without sidebar
+
+## Style Only
+
+- full width templates needs larger body text and line height.
+  - modified page styles for full width templates.
