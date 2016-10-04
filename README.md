@@ -11,4 +11,15 @@ Due by 2016-11-14
 
 ## adding Resume (CPT)
 
--
+- added resume_cpt.php for custom post type.
+
+### ToDo
+
+- meta box
+  - fields
+    - date
+    - location
+    - title
+    - company
+    - description
+- use custom code in content.

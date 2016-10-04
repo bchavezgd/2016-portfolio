@@ -156,4 +156,4 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load Resume CPT.
  */
-require get_template_directory() . '/inc/resume.php';
+require get_template_directory() . '/inc/resume/resume_cpt.php';

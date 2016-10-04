@@ -55,7 +55,7 @@ function bchavez_resume() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'rewrite'               => $rewrite,
-		'capability_type'       => 'page',
+		'capability_type'       => 'post',
 	);
 	register_post_type( 'resume', $args );
 // $resume_query = new WP_Query('post_type' => array( 'resume' ));
