@@ -126,6 +126,8 @@ function bchavez_portfolio_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bchavez_portfolio_scripts' );
 
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -150,3 +152,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Resume CPT.
+ */
+require get_template_directory() . '/inc/resume.php';
