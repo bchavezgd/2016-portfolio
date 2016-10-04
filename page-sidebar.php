@@ -10,7 +10,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package bchavez
- *
+ * Template name: with sidebar
  * body class -> page
  */
 
@@ -36,5 +36,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-// get_sidebar();
+get_sidebar();
 get_footer();
