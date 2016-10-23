@@ -44,12 +44,12 @@ function bchavez_portfolio_byline() {
 }
 /* end byline */
 
-if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) :
+if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) {
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function bchavez_portfolio_entry_footer() {}
-endif;
+};
 /**
  * Returns true if a blog has more than 1 category.
  *
@@ -92,14 +92,14 @@ add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
 /* using to insert post thumbnail in to a background of the post header on a page */
 function bchavez_post_hero() {
 	if (has_post_thumbnail()) {
-		echo "<header class=\"entry-header hero\" style=\"background-image: url(" ;
-		esc_url( the_post_thumbnail_url() );
-		echo " );\">";
-} else {
+		echo '<header class="entry-header hero" style="background-image: url(';
+		the_post_thumbnail_url();
+		echo ');">';
+	} else {
 		echo '<header class="entry-header">';
 	};
 	the_title( '<h1 class="entry-title">', '</h1>' );
-	echo "</header><!-- .entry-header -->";
+	echo '</header><!-- .entry-header -->';
 }
 
 /* seperating category and tags list for better styling options. */
@@ -142,4 +142,43 @@ function bchavez_portfolio_edit_link() {
 		'<span class="edit-link">',
 		'</span>'
 	);
+}
+
+function bchavez_morse() { ?>
+
+	<div class="morse-name">
+	  <div class="letter b">
+	    <div class="dash"></div>
+	    <div class="dot"></div>
+	    <div class="dot"></div>
+	    <div class="dot"></div>
+	  </div>
+	  <div class="letter r">
+	    <div class="dot"></div>
+	    <div class="dash"></div>
+	    <div class="dot"></div>
+	  </div>
+	  <div class="letter i">
+	    <div class="dot"></div>
+	    <div class="dot"></div>
+	  </div>
+	  <div class="letter a">
+	    <div class="dot"></div>
+	    <div class="dash"></div>
+	  </div>
+	  <div class="letter n">
+	    <div class="dash"></div>
+	    <div class="dot"></div>
+	  </div>
+	</div>
+	<?php
+
+	function bchavez_entry_thumbnail_loop($permalink) {
+		if( !is_sticky() && has_post_thumbnail() ) {
+			echo '<figure class="entry-thumbnail-loop"><a href="' . $permalink . '">';
+			the_post_thumbnail('loop');
+			echo '</a></figure>';
+		};
+	}
+
 }

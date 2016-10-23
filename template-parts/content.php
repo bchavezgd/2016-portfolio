@@ -42,13 +42,8 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-		if( !is_sticky() && has_post_thumbnail() ) {
-			echo '<figure><a href="' . $permalink . '">';
-			the_post_thumbnail('loop');
-			echo '</a></figure>';
-		}; ?>
-		<section>
+		<?php bchavez_entry_thumbnail_loop($permalink); ?>
+		<!-- <section> -->
 			<?php
 			the_excerpt( sprintf(
 				/* translators: %s: Name of current post. */
@@ -58,7 +53,7 @@
 				),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );?>
-		</section>
+		<!-- </section> -->
 
 		<?php
 			wp_link_pages( array(

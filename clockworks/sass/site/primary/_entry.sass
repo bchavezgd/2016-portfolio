@@ -1,15 +1,26 @@
 .entry
   &-header
     position: relative
+    +trailer()
   &-title
     z-index: 0
   &-content
-    +flex--rows()
+    // +flex--rows()
+    // awkward spacing in loop.
+  &-thumbnail
+    &-loop
+      flex: 1 0 30%
+      margin: 1.25rem 1rem 0 0
+  &-meta
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    width: 100%
   &-footer
     +trailer()
     .entry-meta
       +trailer()
-      border-bottom: 1px solid $color__gray_18p
+      // border-bottom: 1px solid $color__gray_18p
       justify-content: space-around
       > .flex
         +trailer(1)
@@ -22,4 +33,5 @@
 
 .single .post
   margin: 0 auto
+  +trailer(3)
   width: 75%

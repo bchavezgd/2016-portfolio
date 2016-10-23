@@ -41,14 +41,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-		if( !is_sticky() && has_post_thumbnail() ) {
-			echo '<figure><a href="' . $permalink . '">';
-			the_post_thumbnail('loop');
-			echo '</a></figure>';
-		}; ?>
+
 		<section>
 			<?php
+			// removed loop thumbnail
+			the_title();
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses(

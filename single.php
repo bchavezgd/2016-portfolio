@@ -5,6 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package bchavez
+ * Template Name: With Sidebar
  */
 
 get_header(); ?>
@@ -21,7 +22,7 @@ get_header(); ?>
 					<?php bchavez_post_hero(); ?>
 				</header><!-- .entry-header -->
 					<div class="entry-content">
-					<section>
+					<!-- <section> -->
 				<?php
 					the_content( sprintf(
 						/* translators: %s: Name of current post. */
@@ -31,7 +32,7 @@ get_header(); ?>
 						),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
-					echo '</section>';
+					// echo '</section>';
 
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bchavez_portfolio' ),

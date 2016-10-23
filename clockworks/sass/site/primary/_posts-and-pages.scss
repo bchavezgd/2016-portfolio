@@ -2,7 +2,6 @@
 @import "entry";
 
 .hentry {
-  // margin: $font__line-height-body * 1em;
   @include trailer(6);
 }
 
@@ -24,16 +23,13 @@
   border-bottom: 1px solid $color__gray_18p;
 }
 
-
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
 article {
     width: 100%;
-    // margin: 0 auto 1.25rem 0;
-    @include trailer(); 
+    @include trailer();
 }
 
 .single p {
