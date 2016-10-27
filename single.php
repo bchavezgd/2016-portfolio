@@ -22,7 +22,7 @@ get_header(); ?>
 					<?php bchavez_post_hero(); ?>
 				</header><!-- .entry-header -->
 					<div class="entry-content">
-					<!-- <section> -->
+
 				<?php
 					the_content( sprintf(
 						/* translators: %s: Name of current post. */
@@ -32,7 +32,6 @@ get_header(); ?>
 						),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
-					// echo '</section>';
 
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bchavez_portfolio' ),

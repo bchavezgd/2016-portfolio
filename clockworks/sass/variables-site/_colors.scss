@@ -1,7 +1,16 @@
+$colors__theme:(
+	default: lighten(#000, 46.7%),
+	primary: darken(#85899B, 6.5%),
+	success: rgb(92, 184, 92),
+	info: rgb(23, 190, 229),
+	warning: rgb(224, 204, 0),
+	danger: rgb(173, 17, 76),
+);
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: #334040;
 $color__background-pre: #414040;
 $color__background-ins: #fff9c0;
 

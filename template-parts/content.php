@@ -41,7 +41,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content flex">
 		<?php bchavez_entry_thumbnail_loop($permalink); ?>
 		<!-- <section> -->
 			<?php

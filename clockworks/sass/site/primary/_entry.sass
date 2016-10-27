@@ -5,8 +5,6 @@
   &-title
     z-index: 0
   &-content
-    // +flex--rows()
-    // awkward spacing in loop.
   &-thumbnail
     &-loop
       flex: 1 0 30%
@@ -20,10 +18,9 @@
     +trailer()
     .entry-meta
       +trailer()
-      // border-bottom: 1px solid $color__gray_18p
       justify-content: space-around
       > .flex
-        +trailer(1)
+        +trailer()
       > span
         padding: 0 2ch
         &:first-of-type
