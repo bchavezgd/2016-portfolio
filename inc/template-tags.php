@@ -92,9 +92,7 @@ add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
 /* using to insert post thumbnail in to a background of the post header on a page */
 function bchavez_post_hero() {
 	if (has_post_thumbnail()) {
-		echo '<header class="entry-header hero" style="background-image: url(';
-		the_post_thumbnail_url();
-		echo ');">';
+		printf('<header class="entry-header hero" style="background-image: url( %s );">', get_the_post_thumbnail_url());
 	} else {
 		echo '<header class="entry-header">';
 	};

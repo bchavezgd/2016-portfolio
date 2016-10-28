@@ -2,7 +2,7 @@
  * File navigation.js.
  *
  * Handles toggling the navigation menu for small screens and enables tab
- * support for dropdown menus.
+ * support for dropdown menus. 
  */
 ( function() {
 	var container,

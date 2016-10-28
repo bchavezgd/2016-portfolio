@@ -39,7 +39,8 @@ this is the header  stuff
     <?php
       wp_nav_menu( array(
         'theme_location'  => 'primary',
-        'menu_id'         => 'primary-menu'
+        'menu_id'         => 'primary-menu',
+				'container_class' => 'menu-first nav-container'
       ) );
     ?>
 </nav><!-- #site-navigation --> </header><!-- #masthead -->
