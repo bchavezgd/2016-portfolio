@@ -3,6 +3,10 @@
 	font-size: $sizeValue * $font__size_main;
 	font-size: $sizeValue * 1rem;
 }
+@mixin font-size-sm($sizeValue: 1) {
+	font-size: $sizeValue * $font__size_main_sm;
+	font-size: $sizeValue * 1rem;
+}
 
 // Center block
 @mixin center-block {

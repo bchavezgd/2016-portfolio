@@ -142,34 +142,7 @@ function bchavez_portfolio_edit_link() {
 	);
 }
 
-function bchavez_morse() { ?>
 
-	<div class="morse-name">
-	  <div class="letter b">
-	    <div class="dash"></div>
-	    <div class="dot"></div>
-	    <div class="dot"></div>
-	    <div class="dot"></div>
-	  </div>
-	  <div class="letter r">
-	    <div class="dot"></div>
-	    <div class="dash"></div>
-	    <div class="dot"></div>
-	  </div>
-	  <div class="letter i">
-	    <div class="dot"></div>
-	    <div class="dot"></div>
-	  </div>
-	  <div class="letter a">
-	    <div class="dot"></div>
-	    <div class="dash"></div>
-	  </div>
-	  <div class="letter n">
-	    <div class="dash"></div>
-	    <div class="dot"></div>
-	  </div>
-	</div>
-	<?php
 
 	function bchavez_entry_thumbnail_loop($permalink) {
 		if( !is_sticky() && has_post_thumbnail() ) {
@@ -178,5 +151,3 @@ function bchavez_morse() { ?>
 			echo '</a></figure>';
 		};
 	}
-
-}

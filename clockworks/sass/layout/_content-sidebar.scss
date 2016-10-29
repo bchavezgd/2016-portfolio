@@ -2,11 +2,11 @@
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
-	margin-top: 3em * $font__line-height-body
+	// margin-top: 3em * $font__line-height-body
 }
 .content-area {
-	width: 62%;
-	width: 62vw;
+	width: 100%;
+	width: 100vw;
 	margin-right: 1em * $font__line-height-body
 }
 

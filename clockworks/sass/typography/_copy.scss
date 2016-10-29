@@ -1,5 +1,5 @@
 p {
-	margin-bottom: 1rem * $font__line-height-body;
+	margin: ($font__line-height-body - 1 * 1em ) 0 (1rem * $font__line-height-body);
 }
 
 dfn, cite, em, i {
@@ -42,5 +42,5 @@ mark, ins {
 }
 
 big {
-	font-size: 125%;
+	@include font-size(1.25);
 }

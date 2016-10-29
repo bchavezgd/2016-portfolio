@@ -3,10 +3,10 @@ button,
 input,
 select,
 textarea {
+	text-size-adjust: 100%;
 	color: $color__text-main;
-	font-family: $font__main;
-	// @include font-size(1);
-	font-size: $font__size_main;
+	font-family: $font__fam-main;
+	font-size: $font__size_main_sm;
 	line-height: $font__line-height-body;
 }
 

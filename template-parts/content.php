@@ -11,7 +11,6 @@
 <!-- content.php -->
 <article id="post-<?php the_ID() ?>" <?php post_class(); ?>>
 	<header class="entry-header clear">
-
 		<?php
 		$permalink = esc_url( get_permalink() ) ;
 		if( has_post_thumbnail() ) {
@@ -42,7 +41,9 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content flex">
-		<?php bchavez_entry_thumbnail_loop($permalink); ?>
+		<?php
+		bchavez_entry_thumbnail_loop($permalink);
+		?>
 		<!-- <section> -->
 			<?php
 			the_excerpt( sprintf(

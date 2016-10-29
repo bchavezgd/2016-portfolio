@@ -4,7 +4,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.65px;
   margin: 0;
   clear: both;
-  @include trailer();
+  margin: ($font__line-height-body - 1 * 1em ) 0 (1rem * $font__line-height-body);
+  // @include trailer();
 
 }
 h1 {

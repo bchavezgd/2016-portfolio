@@ -1,5 +1,5 @@
 var $displacement = jQuery('.site-header').outerHeight(true);
-
-jQuery('body').css({
-	"padding-top": $displacement
-});
+// 
+// jQuery('body').css({
+// 	"padding-top": $displacement
+// });

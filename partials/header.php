@@ -1,8 +1,7 @@
 <?php
-/*
-this is the header  stuff
-
-*/
+/**
+	* this is the header  stuff
+	*/
 ?>
 
 <?php if ( get_header_image() ) : ?>
