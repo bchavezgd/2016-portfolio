@@ -1,6 +1,6 @@
 .comment
 	&-content a
-		word-wrap: break-word
+		// word-wrap: break-word
 	&-list
 		margin: 0
 		+trailer(2)
@@ -8,9 +8,8 @@
 	display: block
 .comments
 	&-area
+		margin: 0 1rem
 		+trailer()
-		width: 75%
-		margin: 0 auto
 		ol.comment-list
 			padding: 0 0 0 (1em * $font__line-height-body)
 	&-title

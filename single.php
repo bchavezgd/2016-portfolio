@@ -17,10 +17,9 @@ get_header(); ?>
 		while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID() ?>" <?php post_class(); ?>>
+			<?php bchavez_post_hero();?>
 
-				<header class="entry-header clear">
-					<?php bchavez_post_hero(); ?>
-				</header><!-- .entry-header -->
+				<!-- .entry-header -->
 					<div class="entry-content">
 
 				<?php

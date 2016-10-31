@@ -17,16 +17,20 @@
 			echo '<div class="entry-meta">';
 			if( is_sticky() ){
 				the_post_thumbnail('full');
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() )  . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="entry-title"><a href="' . $permalink  . '" rel="bookmark">', '</a></h2>' );
 				bchavez_portfolio_posted_on();
 			} elseif ( is_single() ) {
+				// bchavez_entry_thumbnail_loop($permalink);
+				printf ('<figure class="entry-thumbnail-loop"><a href="%1$s">%2$s</a></figure>', $permalink, get_the_post_thumbnail($post->ID, 'loop') );
+
 				the_title( '<h1 class="entry-title">', '</h1>' );
 				bchavez_portfolio_posted_on();
 			} else {
+				// bchavez_entry_thumbnail_loop($permalink);
+				printf ('<figure class="entry-thumbnail-loop"><a href="%s">%s</a></figure>', $permalink, get_the_post_thumbnail($post->ID, 'loop') );
 				the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
 				bchavez_portfolio_posted_on();
 			};
-			echo '</div><!-- .entry-meta -->';
 		} else {
 				echo '<div class="entry-meta alignleft">';
 				if ( is_single() ) {
@@ -36,13 +40,14 @@
 					the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
 					bchavez_portfolio_posted_on();
 				}
-				echo '</div><!-- .entry-meta -->';}
+		}
 		?>
+		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content flex">
 		<?php
-		bchavez_entry_thumbnail_loop($permalink);
+		// bchavez_entry_thumbnail_loop($permalink);
 		?>
 		<!-- <section> -->
 			<?php
@@ -64,7 +69,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer flex">
 		<?php
 		bchavez_portfolio_byline();
 		bchavez_portfolio_entry_footer(); ?>

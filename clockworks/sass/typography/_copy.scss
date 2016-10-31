@@ -1,5 +1,6 @@
 p {
 	margin: ($font__line-height-body - 1 * 1em ) 0 (1rem * $font__line-height-body);
+	word-wrap: break-word;
 }
 
 dfn, cite, em, i {

@@ -113,11 +113,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "media/media";
 
-/*--------------------------------------------------------------
-# Morse
---------------------------------------------------------------*/
-@import "elements/morse";
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 960px){
 	@import "typography/headings-lrg";
 }

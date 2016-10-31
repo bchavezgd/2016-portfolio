@@ -6,31 +6,31 @@
  *
  * @package bchavez
  */
-if ( ! function_exists( 'bchavez_portfolio_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-function bchavez_portfolio_posted_on() {
-	if ( get_post_type() === 'post' ) :
-	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-	}
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'bchavez_portfolio' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+if ( ! function_exists( 'bchavez_portfolio_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function bchavez_portfolio_posted_on() {
+		if ( get_post_type() === 'post' ) :
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		}
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+		$posted_on = sprintf(
+			esc_html_x( 'Posted on %s', 'post date', 'bchavez_portfolio' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
 
-	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-endif;
-}
-endif;
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	endif;
+	}
+};
 /* end posted on */
 
 /* byline changes. */
@@ -45,10 +45,10 @@ function bchavez_portfolio_byline() {
 /* end byline */
 
 if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) {
-/**
- * Prints HTML with meta information for the categories, tags and comments.
- */
-function bchavez_portfolio_entry_footer() {}
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function bchavez_portfolio_entry_footer() {}
 };
 /**
  * Returns true if a blog has more than 1 category.
@@ -92,12 +92,12 @@ add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
 /* using to insert post thumbnail in to a background of the post header on a page */
 function bchavez_post_hero() {
 	if (has_post_thumbnail()) {
-		printf('<header class="entry-header hero" style="background-image: url( %s );">', get_the_post_thumbnail_url());
+		printf('<img src="%1$s" class="hero img-responsive" alt="%2$s">', get_the_post_thumbnail_url(), get_the_title());
 	} else {
 		echo '<header class="entry-header">';
 	};
 	the_title( '<h1 class="entry-title">', '</h1>' );
-	echo '</header><!-- .entry-header -->';
+	echo '</header>';
 }
 
 /* seperating category and tags list for better styling options. */
@@ -143,10 +143,10 @@ function bchavez_portfolio_edit_link() {
 }
 
 
-
+// don't think i need this.
 	function bchavez_entry_thumbnail_loop($permalink) {
 		if( !is_sticky() && has_post_thumbnail() ) {
-			echo '<figure class="entry-thumbnail-loop"><a href="' . $permalink . '">';
+			printf ('<figure class="entry-thumbnail-loop"><a href="%s">', $permalink);
 			the_post_thumbnail('loop');
 			echo '</a></figure>';
 		};

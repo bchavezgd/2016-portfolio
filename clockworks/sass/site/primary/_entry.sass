@@ -1,20 +1,29 @@
 .entry
   &-header
     position: relative
-    +trailer()
+    +trailer(0.25)
   &-title
     z-index: 0
+    +trailer(0.25)
+    .single &
+      margin-left: 1rem
+      margin-right: 1rem
+      +trailer(2)
   &-content
+    flex-direction: column
   &-thumbnail
     &-loop
+      width: 100vw
+      margin: 0 0 0 (-1em * $font__line-height-body)
       flex: 1 0 30%
-      margin: 1.25rem 1rem 0 0
   &-meta
-    display: flex
-    justify-content: space-between
-    align-items: baseline
-    width: 100%
+    // display: flex
+    // justify-content: space-between
+    // align-items: baseline
+    // flex-direction: column
+    // width: 100%
   &-footer
+    margin: 0 1rem
     +trailer()
     .entry-meta
       +trailer()
@@ -27,8 +36,3 @@
           padding-left: 0
         &:last-of-type
           padding-right: 0
-
-.single .post
-  margin: 0 auto
-  +trailer(3)
-  width: 75%

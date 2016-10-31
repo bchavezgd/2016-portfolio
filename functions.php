@@ -130,6 +130,11 @@ function bchavez_portfolio_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bchavez_portfolio_scripts' );
 
+function bchavez_portfolio_read_more_link() {
+    return '<a class="more-link btn btn-primary" href="' . get_permalink() . '">Your Read More Link Text</a>';
+}
+add_filter( 'the_content_more_link', 'bchavez_portfolio_read_more_link' );
+
 
 
 /**
