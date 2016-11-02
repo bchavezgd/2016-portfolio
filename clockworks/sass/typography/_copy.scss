@@ -1,5 +1,5 @@
 p {
-	margin: ($font__line-height-body - 1 * 1em ) 0 (1rem * $font__line-height-body);
+	@include body-block-margin();
 	word-wrap: break-word;
 }
 
@@ -8,17 +8,17 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	@include body-block-margin();
 }
 
 address {
-	margin: 0 0 1.5em;
+	@include body-block-margin();
 }
 
 pre {
 	background: $color__background-pre;
-	font-family: $font__pre;
-	@include font-size(0.9375);
+	font-family: $font__fam_pre;
+	@include font-size(0.875);
 	line-height: $font__line-height-pre;
   color: $color__gray_18p;
 	margin-bottom: 1em * $font__line-height-pre;
@@ -28,8 +28,8 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: $font__code;
-	@include font-size(0.9375);
+	font-family: $font__fam_code;
+	@include font-size(0.875);
 }
 
 abbr, acronym {

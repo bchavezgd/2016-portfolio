@@ -6,8 +6,8 @@
     z-index: 0
     +trailer(0.25)
     .single &
-      margin-left: 1rem
-      margin-right: 1rem
+      margin-left: 1rem * $font__line-height-body
+      margin-right: 1rem * $font__line-height-body
       +trailer(2)
   &-content
     flex-direction: column
@@ -17,13 +17,8 @@
       margin: 0 0 0 (-1em * $font__line-height-body)
       flex: 1 0 30%
   &-meta
-    // display: flex
-    // justify-content: space-between
-    // align-items: baseline
-    // flex-direction: column
-    // width: 100%
   &-footer
-    margin: 0 1rem
+    margin: 0 (1rem * $font__line-height-body)
     +trailer()
     .entry-meta
       +trailer()

@@ -2,17 +2,21 @@
 .site
   &-header
     padding: ($font__line-height-body * 1em)
-    +trailer(2)
+    +trailer(1)
     background: #ffffff
     height: auto
     display: flex
     align-items: baseline
+    a
+      text-decoration: none
+      color: inherit
   &-branding
     flex: 1 0 auto
   &-title
     @extend h1
+
   &-description
-    margin: 0
+    margin: ($font__line-height-body - 1em) 0 0
     a
       color: $color__gray_18p
       &:visited
