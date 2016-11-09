@@ -16,43 +16,29 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<p>
-				 this is the front-page file.
-			</p>
-			<section>
-
+			<section id="portfolio">
 				<?php
-				$args = ['pagename' => 'about'];
-				$query = new WP_query($args);
+					// WP_Query arguments
+					$args = array (
+						'post_type' => array( 'portfolio' ),
+					);
+					// The Query
+					$query = new WP_Query( $args );
+
+				// the loop
 				if( $query->have_posts() ) {
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						the_content();
+
+						get_template_part( 'template-parts/content-portfolio' );
 					};
 				};
 				wp_reset_postdata();
 				?>
 			</section>
-			<section>
-
-			</section>
-			<section id="contact">
-				<?php
-					$args = ['page_id' => '199'];
-					$query = new WP_query($args);
-					if( $query->have_posts() ) {
-						while ( $query->have_posts() ) {
-							$query->the_post();
-							the_content();
-						};
-					};
-					wp_reset_postdata();
-
-				?>
-			</section>
+			<!-- end portfolio -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-// get_sidebar();
 get_footer();

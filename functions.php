@@ -46,6 +46,7 @@ function bchavez_portfolio_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'bchavez_portfolio' ),
+		'portfolio-post' => esc_html__( 'Portfolio Post Nav', 'bchavez_portfolio'),
 	) );
 
 	/*
@@ -105,6 +106,46 @@ function bchavez_portfolio_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'front-page-mid-a', 'bchavez_portfolio' ),
+		'id'            => 'site-footer-a',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'front-page-mid-b', 'bchavez_portfolio' ),
+		'id'            => 'site-footer-b',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'front-page-mid-c', 'bchavez_portfolio' ),
+		'id'            => 'site-footer-c',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'	=> esc_html__('post-footer-widget', 'bchavez_portfolio'),
+		'id'	=> 'post-footer-widget',
+		'description'   => 'at the end of the portfolio project',
+		'before_widget' => '<section id="%1$s" class="footer-widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+		)
+	);
+
 }
 add_action( 'widgets_init', 'bchavez_portfolio_widgets_init' );
 
@@ -116,11 +157,11 @@ function bchavez_portfolio_scripts() {
 
 	wp_enqueue_script( 'bchavez_portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	// wp_enqueue_script( 'bchavez_portfolio-typekit', get_template_directory_uri() . '/js/typekit.js' );
+	wp_enqueue_script( 'bchavez_portfolio-typekit', get_template_directory_uri() . '/js/typekit.js', [],'161102' );
 
 	wp_enqueue_script( 'bchavez_portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'bchavez_portfolio-jquery-things', get_template_directory_uri() . '/js/elephantaviator.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'bchavez_portfolio-jquery-things', get_template_directory_uri() . '/js/elephantaviator.js', array('jquery'), '20161101', true );
 
 	// wp_enqueue_script('jquery');
 

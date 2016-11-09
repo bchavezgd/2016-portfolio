@@ -1,33 +1,59 @@
 .entry
   &-header
+    +body-block-margin(0.5)
     position: relative
-    +trailer(0.25)
+    max-height: 80vw
   &-title
-    z-index: 0
-    +trailer(0.25)
-    .single &
-      margin-left: 1rem * $font__line-height-body
-      margin-right: 1rem * $font__line-height-body
-      +trailer(2)
+    a
+      hyphens: none
+      text-decoration: none
   &-content
-    flex-direction: column
-  &-thumbnail
-    &-loop
-      width: 100vw
-      margin: 0 0 0 (-1em * $font__line-height-body)
-      flex: 1 0 30%
+  &-thumbnail-loop
   &-meta
-  &-footer
-    margin: 0 (1rem * $font__line-height-body)
+    +body-block-margin()
+
+
+.entry-footer
+  +body-block-margin()
+  +rhythm__padding()
+  background: $color__gray_50p
+  color: $color__background-screen
+  a
+    color: inherit
+    hyphens: none
+  .tags-links, .cat-links
+    text-transform: capitalize
+
+  .entry-meta
     +trailer()
-    .entry-meta
+    justify-content: space-around
+    > .flex
       +trailer()
-      justify-content: space-around
-      > .flex
-        +trailer()
-      > span
-        padding: 0 2ch
-        &:first-of-type
-          padding-left: 0
-        &:last-of-type
-          padding-right: 0
+    > span
+      padding: 0 2ch
+      &:first-of-type
+        padding-left: 0
+      &:last-of-type
+        padding-right: 0
+
+.portfolio
+  .entry-header
+    margin: 0
+  &-nav
+    ul
+      padding: 0
+      list-style-type: none
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+
+.home
+  article
+    line-height: 0
+  h2.entry-title
+    background: rgba(255,255,255, 0.7)
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: (0.5em * $font__line-height-body)
+    width: 100%

@@ -30,5 +30,7 @@
     right: 0
     bottom: 0
 
-=body-block-margin()
-  margin: ($font__line-height-body - 1 * 1em ) 0 (1em * $font__line-height-body)
+=body-block-margin($f: 1)
+  margin:
+    top: ($font__line-height-body - 1 * $f * 1rem )
+    bottom: ( $f * 1rem * $font__line-height-body)

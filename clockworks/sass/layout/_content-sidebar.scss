@@ -5,7 +5,7 @@
 	// margin-top: 3em * $font__line-height-body
 }
 .content-area {
-	margin: 0 (1em * $font__line-height-body) (1em * $font__line-height-body);
+	// margin: 0 (1em * $font__line-height-body) (1em * $font__line-height-body);
 }
 
 .site-main {}
@@ -18,5 +18,14 @@
 .site-footer {
 	clear: both;
 	width: $size__site-main;
+	padding: $font__line-height-body * 1rem;
+	background: $color__gray_92p;
+	color: $color__gray_18p;
+	a {
+		color: inherit;
+		&:visited{
+			color: $color__gray_18p
+		}
+	}
 
 }

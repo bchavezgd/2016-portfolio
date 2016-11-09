@@ -35,7 +35,7 @@ function bchavez_portfolio_cpt() {
 		'description'           => __( 'Portfolio items', 'bchavez_portfolio' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'post-formats', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'project_type', 'roles' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -55,3 +55,77 @@ function bchavez_portfolio_cpt() {
 
 }
 add_action( 'init', 'bchavez_portfolio_cpt', 0 );
+
+
+// Register Custom Taxonomy
+function custom_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Roles', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Role', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Role', 'text_domain' ),
+		'all_items'                  => __( 'All Roles', 'text_domain' ),
+		'parent_item'                => __( 'Parent Role', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Role:', 'text_domain' ),
+		'new_item_name'              => __( 'New Role Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Role', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Role', 'text_domain' ),
+		'update_item'                => __( 'Update Role', 'text_domain' ),
+		'view_item'                  => __( 'View Role', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Roles with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Roles', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Roles', 'text_domain' ),
+		'search_items'               => __( 'Search Roles', 'text_domain' ),
+		'not_found'                  => __( 'Role Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'Roles list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Roles list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+	);
+	register_taxonomy( 'roles', array( 'portfolio' ), $args );
+
+
+	$labels = array(
+		'name'                       => _x( 'Project Types', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Project Type', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Project Type', 'text_domain' ),
+		'all_items'                  => __( 'All Project Types', 'text_domain' ),
+		'parent_item'                => __( 'Parent Project Type', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Project Type:', 'text_domain' ),
+		'new_item_name'              => __( 'New Project Type Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Project Type', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Project Type', 'text_domain' ),
+		'update_item'                => __( 'Update Project Type', 'text_domain' ),
+		'view_item'                  => __( 'View Project Type', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Project Types with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Project Types', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Project Types', 'text_domain' ),
+		'search_items'               => __( 'Search Project Types', 'text_domain' ),
+		'not_found'                  => __( 'Project Type Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'Project Types list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Project Types list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+	);
+	register_taxonomy( 'project_type', array( 'portfolio' ), $args );
+
+}
+add_action( 'init', 'custom_taxonomy', 0 );

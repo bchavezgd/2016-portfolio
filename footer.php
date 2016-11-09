@@ -15,6 +15,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 <section class="wrapper">
+	<div class="widget-container">
+		<?php
+		dynamic_sidebar( 'site-footer-a' );
+		dynamic_sidebar( 'site-footer-b' );
+		dynamic_sidebar( 'site-footer-c' );
+		?>
+	</div>
 	<div class="site-info">
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bchavez_portfolio' ) );?> ">
 			<?php printf( esc_html__( 'Proudly powered by %s', 'bchavez_portfolio' ), 'WordPress' ); ?>

@@ -11,24 +11,23 @@ if ( ! function_exists( 'bchavez_portfolio_posted_on' ) ) {
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function bchavez_portfolio_posted_on() {
-		if ( get_post_type() === 'post' ) :
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		if ( get_post_type() === 'post' ) {
+			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+				$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			}
+			$time_string = sprintf( $time_string,
+				esc_attr( get_the_date( 'c' ) ),
+				esc_html( get_the_date() ),
+				esc_attr( get_the_modified_date( 'c' ) ),
+				esc_html( get_the_modified_date() )
+			);
+			$posted_on = sprintf(
+				esc_html_x( 'Posted on %s', 'post date', 'bchavez_portfolio' ),
+				'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			);
+			echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 		}
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
-		);
-		$posted_on = sprintf(
-			esc_html_x( 'Posted on %s', 'post date', 'bchavez_portfolio' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
-
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-	endif;
 	}
 };
 /* end posted on */
@@ -91,10 +90,9 @@ add_action( 'save_post',     'bchavez_portfolio_category_transient_flusher' );
 
 /* using to insert post thumbnail in to a background of the post header on a page */
 function bchavez_post_hero() {
+	echo '<header class="entry-header">';
 	if (has_post_thumbnail()) {
 		printf('<img src="%1$s" class="hero img-responsive" alt="%2$s">', get_the_post_thumbnail_url(), get_the_title());
-	} else {
-		echo '<header class="entry-header">';
 	};
 	the_title( '<h1 class="entry-title">', '</h1>' );
 	echo '</header>';
@@ -107,7 +105,13 @@ function bchavez_portfolio_categories_list() {
 	if ( 'post' === get_post_type() ) {
 		$categories_list = get_the_category_list( esc_html__( ', ', 'bchavez_portfolio' ) );
 		if ( $categories_list && bchavez_portfolio_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bchavez_portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'bchavez_portfolio' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+		}
+	};
+	if ( 'portfolio' === get_post_type() ) {
+		$categories_list = get_the_category_list( esc_html__( ', ', 'bchavez_portfolio' ) );
+		if ( $categories_list && bchavez_portfolio_categorized_blog() ) {
+			printf( '<div class="cat-links">' . esc_html__( 'Project Type: %1$s', 'bchavez_portfolio' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 		}
 	}
 }
@@ -120,7 +124,17 @@ function bchavez_portfolio_tag_list() {
 			printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'bchavez_portfolio' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
+	if( 'portfolio' === get_post_type() ) {
+		{
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bchavez_portfolio' ) );
+			if ( $tags_list ) {
+				printf( '<div class="tags-links">' . esc_html__( 'Role: %1$s,', 'bchavez_portfolio' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			}
+		}
+	}
 }
+
 
 function bchavez_portfolio_comments_link() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {

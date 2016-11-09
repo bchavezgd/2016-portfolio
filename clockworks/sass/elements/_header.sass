@@ -1,17 +1,14 @@
 // header
 .site
   &-header
-    padding: ($font__line-height-body * 1em)
-    +trailer(1)
+    padding: ($font__line-height-body * 0.5em)
     background: #ffffff
-    height: auto
-    display: flex
-    align-items: baseline
     a
       text-decoration: none
       color: inherit
   &-branding
-    flex: 1 0 auto
+    box-sizing: border-box
+    // flex: 1 0 auto
   &-title
     @extend h1
 
@@ -24,7 +21,7 @@
       &:hover,
       &:focus,
       &:active
-        color: white
+        color: #ffffff
       &:focus
         outline: thin dotted
       &:hover,

@@ -2,7 +2,7 @@
 @import "entry";
 
 .hentry {
-  @include trailer(3);
+  // @include trailer(3);
 }
 
 .byline,
@@ -16,7 +16,6 @@
 }
 
 .page-content,
-.single .entry-content,
 .entry-summary {
   // padding-bottom: 1em * $font__line-height-body;
   border-bottom: 1px solid $color__gray_18p;
@@ -26,17 +25,12 @@
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
-}
-article {
-  width: 100%;
-  @include trailer();
+	@include trailer();
 }
 
 .post{
   margin: 0;
   @include trailer(3);
-
 }
 .single{
   .content-area{
@@ -44,9 +38,6 @@ article {
   }
   .post{
     p {
-      // margin-left: 1em;
-      // margin-right: 1em;
-      // max-width: 66ch;
     }
   }
 
@@ -54,19 +45,13 @@ article {
 
 .hero {
   @include aspect-ratio(16, 9);
-  @include trailer(2);
   width: 100%;
-  // background-size: cover;
-  // background-position: center top;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  .entry-title {
-    @include rhythm__padding();
-    margin: 1.25em 0;
-    background-color: fade-out($color__gray_18p, 0.30);
-    border: 2px solid;
-  }
+  // .entry-title {
+  //   @include rhythm__padding();
+  //   margin: 1.25em 0;
+  //   background-color: fade-out($color__gray_18p, 0.30);
+  //   border: 2px solid;
+  // }
 
 }
 .page {
