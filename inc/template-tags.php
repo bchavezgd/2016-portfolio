@@ -108,10 +108,13 @@ function bchavez_portfolio_categories_list() {
 			printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'bchavez_portfolio' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 		}
 	};
+
+
 	if ( 'portfolio' === get_post_type() ) {
-		$categories_list = get_the_category_list( esc_html__( ', ', 'bchavez_portfolio' ) );
-		if ( $categories_list && bchavez_portfolio_categorized_blog() ) {
-			printf( '<div class="cat-links">' . esc_html__( 'Project Type: %1$s', 'bchavez_portfolio' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+		global $post;
+		$project_type_list = get_the_term_list($post->ID, 'project_type');
+		if ( $project_type_list && bchavez_portfolio_categorized_blog() ) {
+			printf( '<div class="cat-links">' . esc_html__( 'Project Type: %1$s', 'bchavez_portfolio' ) . '</div>', $project_type_list); // WPCS: XSS OK.
 		}
 	}
 }

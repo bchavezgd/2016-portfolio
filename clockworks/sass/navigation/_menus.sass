@@ -54,7 +54,7 @@
       &:hover > ul, &.focus > ul
         left: 100%
   .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a
-// flex nav
+
 .nav-menu
   display: flex
   justify-content: space-around
@@ -67,6 +67,8 @@
 .menu-toggle, .main-navigation.toggled ul
   // display: block
   display: flex
+  flex-flow: column wrap
+
 
 @media screen and (max-width: 700px)
   .main-navigation

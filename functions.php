@@ -101,35 +101,35 @@ function bchavez_portfolio_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'bchavez_portfolio' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget widget-sidebar %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'front-page-mid-a', 'bchavez_portfolio' ),
+		'name'          => esc_html__( 'site-footer-a', 'bchavez_portfolio' ),
 		'id'            => 'site-footer-a',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget widget-site-footer %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'front-page-mid-b', 'bchavez_portfolio' ),
+		'name'          => esc_html__( 'site-footer-b', 'bchavez_portfolio' ),
 		'id'            => 'site-footer-b',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget widget-site-footer %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'front-page-mid-c', 'bchavez_portfolio' ),
+		'name'          => esc_html__( 'site-footer-c', 'bchavez_portfolio' ),
 		'id'            => 'site-footer-c',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget widget-site-footer %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -139,7 +139,7 @@ function bchavez_portfolio_widgets_init() {
 		'name'	=> esc_html__('post-footer-widget', 'bchavez_portfolio'),
 		'id'	=> 'post-footer-widget',
 		'description'   => 'at the end of the portfolio project',
-		'before_widget' => '<section id="%1$s" class="footer-widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget widget-portfolio-footer %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -209,3 +209,31 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/resume/resume_cpt.php';
 
 require get_template_directory() . '/inc/cpt-portfolio.inc';
+
+add_filter('widget_text','do_shortcode');
+//
+// add_action( 'init', 'my_prefix_load_bfa' );
+// /**
+//  * Initialize the Better Font Awesome Library.
+//  *
+//  * (see usage notes below on proper hook priority)
+//  */
+// function bchavez_portfolio_load_bfa() {
+//
+//     // Include the main library file. Make sure to modify the path to match your directory structure.
+//     require_once ( dirname( __FILE__ ) . '/inc/better-font-awesome-library/better-font-awesome-library.php' );
+//
+//     // Set the library initialization args (defaults shown).
+//     $args = array(
+//             'version'             => 'latest',
+//             'minified'            => true,
+//             'remove_existing_fa'  => false,
+//             'load_styles'         => true,
+//             'load_admin_styles'   => true,
+//             'load_shortcode'      => true,
+//             'load_tinymce_plugin' => true,
+//     );
+//
+//     // Initialize the Better Font Awesome Library.
+//     Better_Font_Awesome_Library::get_instance( $args );
+// }

@@ -6,11 +6,17 @@
 	&-title
     +trailer(0.25)
 
-
-.footer-widget
-  // +body-block-margin()
+.widget-site-footer-container
+	display: flex
+	flex-flow: column
+  +body-block-margin()
   text-align: center
   ul
     padding: 0
   .genericon
     font-size: 2em
+
+.widget_calendar
+	max-width: 14em
+	th, td
+		text-align: right

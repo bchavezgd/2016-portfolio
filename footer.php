@@ -14,22 +14,26 @@
 	</div><!-- #content .site-content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-<section class="wrapper">
-	<div class="widget-container">
-		<?php
-		dynamic_sidebar( 'site-footer-a' );
-		dynamic_sidebar( 'site-footer-b' );
-		dynamic_sidebar( 'site-footer-c' );
-		?>
-	</div>
-	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bchavez_portfolio' ) );?> ">
-			<?php printf( esc_html__( 'Proudly powered by %s', 'bchavez_portfolio' ), 'WordPress' ); ?>
-		</a>
-		<span class="sep"> | </span>
-		<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bchavez_portfolio' ), 'bchavez_portfolio', '<a href="http://www.briandesignworks.com" rel="designer">Brian Chavez</a>' ); ?>
-	</div><!-- .site-info -->
-</section>
+		<section class="wrapper">
+			<div class="widget-site-footer-container">
+				<?php
+				if ( is_active_sidebar( 'site-footer-a' ) ) {
+					dynamic_sidebar( 'site-footer-a' );
+				}
+				if ( is_active_sidebar( 'site-footer-b' ) ) {
+					dynamic_sidebar( 'site-footer-b' );
+				}
+				if ( is_active_sidebar( 'site-footer-c' ) ) {
+					dynamic_sidebar( 'site-footer-c' );
+				}
+				?>
+			</div>
+			<div class="site-info">
+				<?php printf( esc_html__( '&copy; %2$s %1$s', 'bchavez_portfolio' ), '<a href="http://www.briandesignworks.com" rel="designer">Brian Chavez</a>', get_the_date('Y') ); ?>
+			</div>
+			<!-- .site-info -->
+		</section>
+		<!-- end section.wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
