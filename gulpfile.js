@@ -32,7 +32,7 @@ gulp.task('sass', function () {
       })
     ]))
     .pipe( gulp.dest( dist ) )
-		.pipe(livereload())
+		.pipe(livereload());
 });
 
 gulp.task('default', function () {

@@ -14,10 +14,3 @@
 	clear: both;
 	@include center-block;
 }
-
-.content-margin {
-	margin: {
-		left: (0.5rem * $font__line-height-body);
-		right: (0.5rem * $font__line-height-body);
-	}
-}

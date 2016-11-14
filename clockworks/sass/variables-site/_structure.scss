@@ -1,2 +1,48 @@
 $size__site-main: 100%;
 $size__site-sidebar: 30%;
+
+$res__break-point-1: 30em;
+$res__break-point-2: 40em;
+$res__break-point-3: 50em;
+$res__break-point-4: 60em;
+
+%wrapper {
+	max-width: 100%;
+	@media screen and (min-width: $res__break-point-1){
+		width: $res__break-point-1 - 5;
+	}
+	@media screen and (min-width: $res__break-point-2){
+		width: calc(100vw - 6em);
+	}
+	@media screen and (min-width: $res__break-point-3){
+		width: ceil($res__break-point-3 * 0.75);
+	}
+}
+
+%block-center {
+	margin:{
+		left: auto;
+		right: auto;
+	}
+}
+@mixin wrapper() {
+	max-width: 100%;
+	@media screen and (min-width: $res__break-point-1){
+		width: $res__break-point-1 - 5;
+	}
+	@media screen and (min-width: $res__break-point-2){
+		width: calc(100vw - 6em);
+	}
+	@media screen and (min-width: $res__break-point-3){
+		width: ceil($res__break-point-3 * 0.75);
+	}
+}
+@mixin block-center() {
+	@media screen and (min-width: $res__break-point-1){
+		margin:{
+			left: auto;
+			right: auto;
+		}
+	}
+
+}

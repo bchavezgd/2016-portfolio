@@ -21,6 +21,7 @@ get_header(); ?>
 					// WP_Query arguments
 					$args = array (
 						'post_type' => array( 'portfolio' ),
+						'posts_per_page' => '15',
 					);
 					// The Query
 					$query = new WP_Query( $args );

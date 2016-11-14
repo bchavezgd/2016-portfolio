@@ -13,19 +13,20 @@ get_header();
 echo '<main id="main" class="site-main" role="main">';
 
 	while ( have_posts() ) : the_post(); ?>
+<article class="project content-margin">
 
 
-
-		 <header class="entry-header">
+		 <header class="project-header">
 		<?php
-			if( has_post_thumbnail() ) {
-				the_post_thumbnail('full', ['class'=>'hero']) ;
-			}
-			the_title( '<h1 class="entry-title content-margin">', '</h1>' );
+			// if( has_post_thumbnail() ) {
+			// 	the_post_thumbnail('full', ['class'=>'hero']) ;
+			// }
+			the_title( '<h1 class="entry-title header-underline">', '</h1>' );
 			?>
 
 		</header><!-- .entry-header -->
-		<div class="entry-content content-margin">
+		<!-- <div class="project-content entry-content "> -->
+		<div class="project-content">
 		<?php
 			the_content( sprintf(
 					/* translators: %s: Name of current post. */
@@ -37,16 +38,50 @@ echo '<main id="main" class="site-main" role="main">';
 			);
 		?>
 		</div><!-- .entry-content -->
-		<footer class="entry-footer">
-			<div class="entry-meta content-margin">
+		</article>
+		<!-- end .project -->
+		<section id="follow" class="wrapper">
+
 			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bchavez_portfolio' ),
-					'after'  => '</div>',
-				) );
-				bchavez_portfolio_categories_list();
-				bchavez_portfolio_tag_list();
+				// WP_Query arguments
+				$args = array (
+					// 'post_type' => array( 'portfolio' ),
+					// 'posts_per_page' => '15',
+					'pagename' => 'follow',
+				);
+				// The Query
+				$query = new WP_Query( $args );
+
+			// the loop
+			if( $query->have_posts() ) {
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					the_title('<h2 class="fa-title header-underline">','</h2>');
+					echo '<div class="fa-wrapper">';
+					the_content();
+					echo '</div><!--end fa-wrapper -->';
+				};
+			};
+			wp_reset_postdata();
+
+			// dynamic_sidebar( 'post-footer-widget' );
+
 			?>
+		</section>
+		<!-- follow me section -->
+		<footer class="entry-footer">
+			<div class="wrapper">
+				<section class="entry-meta">
+
+				<?php
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bchavez_portfolio' ),
+						'after'  => '</div>',
+					) );
+					bchavez_portfolio_categories_list();
+					bchavez_portfolio_tag_list();
+				?>
+				</section>
 			</div>
 			<!-- .entry-meta -->
 		</footer>
@@ -56,9 +91,9 @@ echo '<main id="main" class="site-main" role="main">';
 	wp_nav_menu( array(
 	  'theme_location'  => 'portfolio-post',
 	  'menu_id'         => 'portfolio-post',
-		'container_class' => 'portfolio-nav nav-container content-margin'
+		'container_class' => 'portfolio-nav nav-container wrapper'
 	) );
-	dynamic_sidebar( 'post-footer-widget' );
+
 echo '</main><!-- #main -->';
 
 get_footer();

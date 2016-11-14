@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<div class="wrapper">
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -39,7 +39,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+			</div>
+			<!-- end .wrapper -->
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

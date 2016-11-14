@@ -44,9 +44,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
+
 @import "mixins/mixins-master";
 @import "mixins/molotov";
+@import "variables-site/variables-site";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -112,8 +113,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-
-@media screen and (min-width: 960px){
-	@import "typography/headings-lrg";
-}

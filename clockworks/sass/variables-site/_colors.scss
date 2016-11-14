@@ -1,10 +1,10 @@
 $colors__theme:(
 	default: lighten(#000, 46.7%),
 	primary: darken(#85899B, 6.5%),
-	success: rgb(92, 184, 92),
-	info: rgb(23, 190, 229),
-	warning: rgb(224, 204, 0),
-	danger: rgb(173, 17, 76),
+	success: #518251,
+	info: rgb(6, 78, 94),
+	warning: rgb(166, 151, 6),
+	danger: #830c39,
 );
 
 $color__background-body: #fff;
@@ -14,16 +14,16 @@ $color__background-button: #334040;
 $color__background-pre: #414040;
 $color__background-ins: #fff9c0;
 
-$color__text-main: #334040;
+$color__text-main: #222222;
 
 $color__text-screen: #790000;
 $color__text-input: #666;
 $color__text-input-focus: #111;
 
-// $color__link: scale-color($color__text-main, $red: 20%);
-$color__link: #222;
-$color__link-visited: lighten($color__link, 20%);
-$color__link-hover: lighten($color__link, 20%);
+// $color__link: #322;
+$color__link: $color__text-main;
+$color__link-visited: #322;
+$color__link-hover: #322;
 
 
 $color__gray_18p: darken(#ffffff, 18%);

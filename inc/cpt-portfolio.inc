@@ -129,3 +129,17 @@ function custom_taxonomy() {
 
 }
 add_action( 'init', 'custom_taxonomy', 0 );
+
+// Add Shortcode
+function project_description( $atts , $content = null ) {
+
+	return '<section class="project-description">' . do_shortcode($content) . '</section>';
+
+}
+function project_gallery( $atts , $content = null ) {
+
+	return '<section class="project-gallery">' . do_shortcode($content) . '</section>';
+
+}
+add_shortcode( 'project-gallery', 'project_gallery' );
+add_shortcode( 'project-description', 'project_description' );

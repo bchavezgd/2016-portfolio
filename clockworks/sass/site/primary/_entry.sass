@@ -2,8 +2,12 @@
   &-header
     +body-block-margin(0.5)
     position: relative
+    z-index: 0
     max-height: 80vw
+
   &-title
+
+    +font-size(1.25)
     a
       hyphens: none
       text-decoration: none
@@ -25,6 +29,7 @@
     text-transform: capitalize
 
   .entry-meta
+    +font-size(0.875)
     +trailer()
     justify-content: space-around
     > .flex
@@ -37,16 +42,6 @@
         padding-right: 0
 
 
-.home .entry-header
-  margin: 0
-  &-nav
-    ul
-      padding: 0
-      list-style-type: none
-      display: flex
-      flex-flow: row wrap
-      justify-content: space-between
-
 .home
   article
     line-height: 0
@@ -57,3 +52,14 @@
     left: 0
     padding: (0.5em * $font__line-height-body)
     width: 100%
+  .entry-header
+    margin: 0
+    &-nav
+      ul
+        padding: 0
+        list-style-type: none
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+
+@import "project"

@@ -1,15 +1,28 @@
 <?php
 /**
- * Custom template tags for this theme.
- *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package bchavez
- */
+	* Custom template tags for this theme.
+	*
+	* Eventually, some of the functionality here could be replaced by core features.
+	*
+	* @package bchavez
+	*/
+
+if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) {
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+	function bchavez_portfolio_entry_footer() {
+		bchavez_portfolio_posted_on();
+		bchavez_portfolio_byline();
+		bchavez_portfolio_categories_list();
+		bchavez_portfolio_tag_list();
+	}
+};
+
 if ( ! function_exists( 'bchavez_portfolio_posted_on' ) ) {
 	/**
-	 * Prints HTML with meta information for the current post-date/time and author.
-	 */
+		* Prints HTML with meta information for the current post-date/time and author.
+		*/
 	function bchavez_portfolio_posted_on() {
 		if ( get_post_type() === 'post' ) {
 			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -43,12 +56,6 @@ function bchavez_portfolio_byline() {
 }
 /* end byline */
 
-if ( ! function_exists( 'bchavez_portfolio_entry_footer' ) ) {
-	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
-	 */
-	function bchavez_portfolio_entry_footer() {}
-};
 /**
  * Returns true if a blog has more than 1 category.
  *
