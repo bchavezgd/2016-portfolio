@@ -56,6 +56,62 @@ function bchavez_portfolio_cpt() {
 }
 add_action( 'init', 'bchavez_portfolio_cpt', 0 );
 
+// Register Custom Post Type
+function bchavez_portfolio_static() {
+
+	$labels = array(
+		'name'                  => _x( 'Static Pages', 'Post Type General Name', 'bchavez_portfolio' ),
+		'singular_name'         => _x( 'Static Page', 'Post Type Singular Name', 'bchavez_portfolio' ),
+		'menu_name'             => __( 'Static Page', 'bchavez_portfolio' ),
+		'name_admin_bar'        => __( 'Static Page', 'bchavez_portfolio' ),
+		'archives'              => __( 'Static Page Archives', 'bchavez_portfolio' ),
+		'parent_item_colon'     => __( 'Parent Static Page:', 'bchavez_portfolio' ),
+		'all_items'             => __( 'All Static Pages', 'bchavez_portfolio' ),
+		'add_new_item'          => __( 'Add New Static Page', 'bchavez_portfolio' ),
+		'add_new'               => __( 'Add Static Page', 'bchavez_portfolio' ),
+		'new_item'              => __( 'New Static Page', 'bchavez_portfolio' ),
+		'edit_item'             => __( 'Edit Static Page', 'bchavez_portfolio' ),
+		'update_item'           => __( 'Update Static Page', 'bchavez_portfolio' ),
+		'view_item'             => __( 'View Static Page', 'bchavez_portfolio' ),
+		'search_items'          => __( 'Search Static Page', 'bchavez_portfolio' ),
+		'not_found'             => __( 'Not found', 'bchavez_portfolio' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'bchavez_portfolio' ),
+		'featured_image'        => __( 'Featured Image', 'bchavez_portfolio' ),
+		'set_featured_image'    => __( 'Set featured image', 'bchavez_portfolio' ),
+		'remove_featured_image' => __( 'Remove featured image', 'bchavez_portfolio' ),
+		'use_featured_image'    => __( 'Use as featured image', 'bchavez_portfolio' ),
+		'insert_into_item'      => __( 'Insert into item', 'bchavez_portfolio' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'bchavez_portfolio' ),
+		'items_list'            => __( 'Items list', 'bchavez_portfolio' ),
+		'items_list_navigation' => __( 'Items list navigation', 'bchavez_portfolio' ),
+		'filter_items_list'     => __( 'Filter items list', 'bchavez_portfolio' ),
+	);
+	$args = array(
+		'label'                 => __( 'Static Page', 'bchavez_portfolio' ),
+		'description'           => __( 'Static Pages', 'bchavez_portfolio' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'post-formats', ),
+		'taxonomies'            => array( 'project_type', 'roles' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-book-alt',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'query_var'             => 'static',
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'static_page', $args );
+
+}
+add_action( 'init', 'bchavez_portfolio_static', 0 );
+
 
 // Register Custom Taxonomy
 function custom_taxonomy() {

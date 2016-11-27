@@ -12,12 +12,17 @@
 		@extend .entry-header
 	&-description
 	&-gallery
-		+body-block-margin(1.5)
+		figure
+			+body-block-margin()
+			img
+				margin: 0
+		img
+			display: block
+			+body-block-margin()
 
 @media screen and (min-width: $res__break-point-2)
 	//front page
 	#portfolio
-		+clearfix()
 		display: flex
 		flex-flow: row wrap
 		justify-content: flex-start
@@ -30,26 +35,27 @@
 @media screen and (min-width: $res__break-point-3)
 	.project
 		&-content
-			+clearfix()
 			display: flex
-			flex-direction: row
+			// flex-flow: row wrap
 			justify-content: space-between
 		&-description
 			float: left
-			max-width: 40%
+			// max-width: 40%
 			flex: 4 0 15em
-			margin-right: 1em * $font__line-height-body
 		&-gallery
 			float: left
 			max-width: 60%
 			flex: 6 0 19em
+			padding-left: 1em * $font__line-height-body
+
 
 @media screen and (min-width: $res__break-point-4)
 	#portfolio article.portfolio
+		max-width: 33%
 		flex-grow: 0
 		flex-shrink: 0
 		flex-basis: 33%
-		max-width: 33%
+
 
 
 /**

@@ -45,7 +45,7 @@ echo '<main id="main" class="site-main" role="main">';
 			<?php
 				// WP_Query arguments
 				$args = array (
-					// 'post_type' => array( 'portfolio' ),
+					// 'post_type' => array( 'static_page' ),
 					// 'posts_per_page' => '15',
 					'pagename' => 'follow',
 				);
@@ -56,8 +56,9 @@ echo '<main id="main" class="site-main" role="main">';
 			if( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();
-					the_title('<h2 class="fa-title header-underline">','</h2>');
-					echo '<div class="fa-wrapper">';
+
+					the_title('<h2 class="fa-title header-underline content-margin">','</h2>');
+					echo '<div class="fa-wrapper content-margin">';
 					the_content();
 					echo '</div><!--end fa-wrapper -->';
 				};
@@ -88,12 +89,13 @@ echo '<main id="main" class="site-main" role="main">';
 		<!-- .entry-footer -->
 <?php
 	endwhile; // End of the loop.
+	echo '<section class="wrapper">';
 	wp_nav_menu( array(
 	  'theme_location'  => 'portfolio-post',
 	  'menu_id'         => 'portfolio-post',
-		'container_class' => 'portfolio-nav nav-container wrapper'
+		'container_class' => 'portfolio-nav nav-container content-margin'
 	) );
 
-echo '</main><!-- #main -->';
+echo '</section><!-- end .wrapper --></main><!-- #main -->';
 
 get_footer();

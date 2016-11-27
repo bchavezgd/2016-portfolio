@@ -155,7 +155,11 @@ add_action( 'widgets_init', 'bchavez_portfolio_widgets_init' );
 function bchavez_portfolio_scripts() {
 	wp_enqueue_style( 'bchavez_portfolio-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'bchavez_portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'bchavez_portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script( 'bchavez_portfolio-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'bchavez_portfolio' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'bchavez_portfolio' ) . '</span>',
+	) );
 
 	wp_enqueue_script( 'bchavez_portfolio-typekit', get_template_directory_uri() . '/js/typekit.js', [],'161102' );
 
@@ -176,20 +180,51 @@ function bchavez_portfolio_read_more_link() {
 }
 add_filter( 'the_content_more_link', 'bchavez_portfolio_read_more_link' );
 
-remove_filter('the_content','wpautop');
 
-//decide when you want to apply the auto paragraph
 
-add_filter('the_content','bchavez_portfolio_raw_html');
 
 function bchavez_portfolio_raw_html($content){
 //if it does not work, you may want to pass the current post object to get_post_type
-	if(get_post_type() == 'portfolio' || get_post_type() == 'page') {
+	if(get_post_type() == 'portfolio' || get_post_type() == 'static') {
 		//no autop
 		return $content;
 	} else {
 		return wpautop($content);
 	}
+}
+// modified content filter to so portfolio post types
+// don't get extranious tags when using shortcodes.
+remove_filter('the_content','wpautop');
+//decide when you want to apply the auto paragraph
+add_filter('the_content','bchavez_portfolio_raw_html');
+
+
+add_filter('widget_text','do_shortcode');
+
+add_action( 'init', 'bchavez_portfolio_load_bfa' );
+/**
+ * Initialize the Better Font Awesome Library.
+ *
+ * (see usage notes below on proper hook priority)
+ */
+function bchavez_portfolio_load_bfa() {
+
+    // Include the main library file. Make sure to modify the path to match your directory structure.
+    require_once ( dirname( __FILE__ ) . '/inc/better-font-awesome-library/better-font-awesome-library.php' );
+
+    // Set the library initialization args (defaults shown).
+    $args = array(
+            'version'             => 'latest',
+            'minified'            => true,
+            'remove_existing_fa'  => false,
+            'load_styles'         => true,
+            'load_admin_styles'   => true,
+            'load_shortcode'      => true,
+            'load_tinymce_plugin' => true,
+    );
+
+    // Initialize the Better Font Awesome Library.
+    Better_Font_Awesome_Library::get_instance( $args );
 }
 
 
@@ -224,31 +259,3 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/resume/resume_cpt.php';
 
 require get_template_directory() . '/inc/cpt-portfolio.inc';
-
-add_filter('widget_text','do_shortcode');
-//
-// add_action( 'init', 'my_prefix_load_bfa' );
-// /**
-//  * Initialize the Better Font Awesome Library.
-//  *
-//  * (see usage notes below on proper hook priority)
-//  */
-// function bchavez_portfolio_load_bfa() {
-//
-//     // Include the main library file. Make sure to modify the path to match your directory structure.
-//     require_once ( dirname( __FILE__ ) . '/inc/better-font-awesome-library/better-font-awesome-library.php' );
-//
-//     // Set the library initialization args (defaults shown).
-//     $args = array(
-//             'version'             => 'latest',
-//             'minified'            => true,
-//             'remove_existing_fa'  => false,
-//             'load_styles'         => true,
-//             'load_admin_styles'   => true,
-//             'load_shortcode'      => true,
-//             'load_tinymce_plugin' => true,
-//     );
-//
-//     // Initialize the Better Font Awesome Library.
-//     Better_Font_Awesome_Library::get_instance( $args );
-// }
