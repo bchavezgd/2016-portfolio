@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package bchavez
- * Template Name: No Sidebar
+ * Template Name: With Sidebar
  */
 
 get_header(); ?>
@@ -16,13 +16,12 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID() ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID() ?>" <?php post_class('wrapper content-margin'); ?>>
+			<?php bchavez_post_hero();?>
 
-				<header class="entry-header clear">
-					<?php bchavez_post_hero(); ?>
-				</header><!-- .entry-header -->
+				<!-- .entry-header -->
 					<div class="entry-content">
-					<section>
+
 				<?php
 					the_content( sprintf(
 						/* translators: %s: Name of current post. */
@@ -32,7 +31,6 @@ get_header(); ?>
 						),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					) );
-					echo '</section>';
 
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bchavez_portfolio' ),
@@ -40,27 +38,33 @@ get_header(); ?>
 					) );
 					?>
 			</div><!-- .entry-content -->
-					<footer class="entry-footer">
-					<div class="entry-meta">
-						<div class="flex flex-row flex-just-between">
-							<?php bchavez_portfolio_posted_on(); ?>
-							<?php bchavez_portfolio_categories_list(); ?>
-						</div>
-						<?php if ( 'post' === get_post_type() )  :?>
-						<div class="flex flex-row flex-just-between">
-							<?php
-								bchavez_portfolio_tag_list();
-								bchavez_portfolio_comments_link();
-								bchavez_portfolio_edit_link();
-								?>
-						</div>
-					<?php endif; ?>
-
-					</div>
-					<!-- end .entry-meta -->
-				<?php the_post_navigation(); ?>
-			</footer><!-- .entry-footer -->
 		</article><!-- #post-## -->
+
+					<footer class="entry-footer">
+					<section class="wrapper">
+						<div class="entry-meta">
+							<div class="flex flex-row flex-just-between">
+								<?php bchavez_portfolio_posted_on(); ?>
+								<?php bchavez_portfolio_categories_list(); ?>
+							</div>
+							<?php if ( 'post' === get_post_type() )  :?>
+							<div class="flex flex-row flex-just-between">
+								<?php
+									bchavez_portfolio_tag_list();
+									bchavez_portfolio_comments_link();
+									bchavez_portfolio_edit_link();
+									?>
+							</div>
+						<?php
+							endif;
+							the_post_navigation();
+						?>
+						</div>
+					</section>
+					<!-- end .entry-meta -->
+
+			</footer><!-- .entry-footer -->
+
 
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template.
@@ -72,5 +76,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php
-
+get_sidebar();
 get_footer();

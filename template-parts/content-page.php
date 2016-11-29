@@ -13,8 +13,6 @@
 	<?php bchavez_post_hero(); ?>
 	<div class="entry-content">
 		<section>
-
-
 		<?php
 			the_content();
 			wp_link_pages( array(

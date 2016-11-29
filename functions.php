@@ -185,7 +185,7 @@ add_filter( 'the_content_more_link', 'bchavez_portfolio_read_more_link' );
 
 function bchavez_portfolio_raw_html($content){
 //if it does not work, you may want to pass the current post object to get_post_type
-	if(get_post_type() == 'portfolio' || get_post_type() == 'static') {
+	if(get_post_type() == 'portfolio' || get_post_type() == 'static_page') {
 		//no autop
 		return $content;
 	} else {

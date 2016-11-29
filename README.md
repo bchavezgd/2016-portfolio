@@ -41,8 +41,28 @@ Due by 2016-11-14
   - refactored some styles for mobile first grid.
 - added `single-portfolio.php`
 - dropped some content from front page. covert mobile to 1 col grid, 2 col on 700+px, 3col for larger screens.
-- added widgets to front page after portfolio for flexiblilty. maybe social media/contact.
-### TODO
+- added widgets to front page after portfolio for flexibility. maybe social media/contact.
 
-- need to add margin to single post styles.
-- need to add custom taxonomy, *Project Type:* and *Role:*
+## 161126
+
+### Menu MVP done.
+
+Still need adjust styling, text is to big even for a small menu.
+
+- added custom taxonomy, *Project Type:* and *Role:*
+
+## 161128
+
+### Progress on MVPs
+- `single-portfolio.php`
+- `single.php`
+- `single-c-s.php`
+  - content right, sidebar left.
+- modified content filter, `wpautop();` was not needed and detrimental to *static_pages,* and *portfolio* CPTs.
+- integrated Better Font Awesome in to theme, with shortcode support in text widgets.
+
+## TODO
+
+- tweak menu and site header to fit more appropriately.
+- add custom logo functionality.
+- increase link target on `front-page.php`.

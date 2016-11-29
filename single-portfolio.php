@@ -13,7 +13,7 @@ get_header();
 echo '<main id="main" class="site-main" role="main">';
 
 	while ( have_posts() ) : the_post(); ?>
-<article class="project content-margin">
+	<article id="post-<?php the_ID() ?>" <?php post_class('project content-margin'); ?>>
 
 
 		 <header class="project-header">
@@ -45,9 +45,9 @@ echo '<main id="main" class="site-main" role="main">';
 			<?php
 				// WP_Query arguments
 				$args = array (
-					// 'post_type' => array( 'static_page' ),
+					'post_type' => array( 'static_page' ),
 					// 'posts_per_page' => '15',
-					'pagename' => 'follow',
+					'pagename' => 'follow-me',
 				);
 				// The Query
 				$query = new WP_Query( $args );
@@ -65,10 +65,9 @@ echo '<main id="main" class="site-main" role="main">';
 			};
 			wp_reset_postdata();
 
-			// dynamic_sidebar( 'post-footer-widget' );
-
 			?>
 		</section>
+		<!-- end .wrapper -->
 		<!-- follow me section -->
 		<footer class="entry-footer">
 			<div class="wrapper">

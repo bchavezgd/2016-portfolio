@@ -26,12 +26,11 @@
 	@include trailer();
 }
 
-.post{
-  margin: 0;
+.post {
   @include trailer(3);
 }
-.single{
-  .content-area{
+.single {
+  .content-area {
     margin: 0;
   }
 }
