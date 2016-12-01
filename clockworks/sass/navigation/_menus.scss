@@ -1,4 +1,7 @@
 .main-navigation {
+
+	font-size: 1rem;
+
 	clear: both;
 	display: block;
 	// width: 100%;
@@ -99,30 +102,28 @@
 }
 
 .nav-menu {
-	// padding: 0 1em;
-	// margin-right: 1rem * $font__line-height-body;
 	background: $color__gray_92p;
 }
 
 .dropdown-toggle {
+	text-align: center;
 	font-family: 'FontAwesome';
 	background-color: transparent;
 	border: 0;
 	box-sizing: content-box;
 	content: "";
-	height: 42px;
 	padding: 0;
 	position: absolute;
 	text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
-	top: 3px;
-	right: 0;
-	width: 42px;
+	top: 1em;
+	right: 0.6em;
+	width: 2em;
+	height: 2em;
 }
 
 .dropdown-toggle:after {
 	color: white;
 	content: "\f078";
-	font-size: 1em;
 	// line-height: 42px;
 	position: relative;
 	top: 0;
@@ -132,7 +133,7 @@
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
-	// background-color: #eaeaea;
+	// color: #eaeaea;
 	background-color: $color__gray_92p;
 }
 
@@ -176,6 +177,9 @@
 @media screen and (min-width: 50em) {
 	.main-navigation {
 		width: 100%;
+		flex: 2 0 66%;
+		display: flex;
+		justify-content: flex-end;
 	}
 	.menu-toggle {
 		display: none;
@@ -304,8 +308,7 @@
 
 	/* Simplify the drop-down toggle */
 	.dropdown-toggle {
-		top: 0.6em;
-		// right: 12px;
+		// top: 0.6em;
 		border: none;
 		background: $color__gray_92p;
 	}
