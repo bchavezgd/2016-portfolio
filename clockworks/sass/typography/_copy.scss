@@ -38,6 +38,9 @@ mark, ins {
 	text-decoration: none;
 }
 
-big {
+.big {
 	@include font-size(1.25);
+}
+.small {
+	@include font-size(0.875);
 }

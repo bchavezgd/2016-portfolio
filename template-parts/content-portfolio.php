@@ -11,26 +11,24 @@
 
 ?>
 <!-- content-portfolio.php -->
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-header">
-		<?php
-		$permalink = esc_url( get_permalink() ) ;
-		if( has_post_thumbnail() ) {
-			if( is_sticky() ){
-				the_post_thumbnail('full', ['class'=>'hero']);
-				the_title( '<h2 class="entry-title"><a href="' . $permalink  . '" rel="bookmark">', '</a></h2>' );
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+	<div class="entry-header gray">
 
-			}
-			else {
-				// display in the loop.
-				the_post_thumbnail('loop', ['class'=>'hero']);
-				the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
-
-			};
-		} else {
-			the_title( '<h2 class="entry-title"><a href="' . $permalink . '" rel="bookmark">', '</a></h2>' );
-		}
-		?>
-
+			<?php
+				if( has_post_thumbnail() ) {
+					?>
+					<a href="<?php the_permalink(); ?>" rel="bookmark">
+						<?php
+					the_post_thumbnail('loop', ['class'=>'entry-thumbnail-loop ']);
+					the_title( '<h2 class="entry-title">', '</h2>' );
+					echo "</a>";
+				} else {
+					?>
+					<a href="<?php the_permalink(); ?>" rel="bookmark">
+						<?php
+					the_title( '<h2 class="entry-title">', '</h2>' );
+					echo "</a>";
+				}
+			?>
 	</div><!-- .entry-header -->
 </article>

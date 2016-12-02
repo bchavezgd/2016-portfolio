@@ -17,19 +17,26 @@
 		<section class="wrapper">
 			<div class="widget-site-footer-container">
 				<?php
-				if ( is_active_sidebar( 'site-footer-a' ) ) {
-					dynamic_sidebar( 'site-footer-a' );
+				if ( is_active_sidebar( 'site-footer-a' ) ) { ?>
+					<div class="">
+						<?php dynamic_sidebar( 'site-footer-a' ); ?>
+					</div>
+					<?php
 				}
-				if ( is_active_sidebar( 'site-footer-b' ) ) {
-					dynamic_sidebar( 'site-footer-b' );
+				if ( is_active_sidebar( 'site-footer-b' ) ) { ?>
+					<div class="">
+						<?php dynamic_sidebar( 'site-footer-b' ); ?>
+					</div>
+				<?php
 				}
-				if ( is_active_sidebar( 'site-footer-c' ) ) {
-					dynamic_sidebar( 'site-footer-c' );
-				}
-				?>
+				if ( is_active_sidebar( 'site-footer-c' ) ) { ?>
+					<div class="">
+						<?php dynamic_sidebar( 'site-footer-c' ); ?>
+					</div>
+				 <?php } ?>
 			</div>
-			<div class="site-info">
-				<?php printf( esc_html__( '&copy; %2$s %1$s', 'bchavez_portfolio' ), '<a href="http://www.briandesignworks.com" rel="designer">Brian Chavez</a>', get_the_date('Y') ); ?>
+			<div class="site-info small">
+				<?php printf( esc_html__( '&copy; %2$s %1$s', 'bchavez_portfolio' ), '<a href="https://www.briandesignworks.com" rel="designer">Brian Chavez</a>', get_the_date('Y') ); ?>
 			</div>
 			<!-- .site-info -->
 		</section>
