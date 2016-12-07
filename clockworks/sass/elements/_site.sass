@@ -8,17 +8,24 @@
         display: flex
         align-items: baseline
         justify-content: space-between
-
     a
       text-decoration: none
-      // color: inherit
   &-branding
-    // @extend %wrapper
-    // @extend %block-center
     flex: 1 0 33%
   &-title
     @extend h1
-
+  &-footer
+    clear: both
+    width: $size__site-main
+    padding: $font__line-height-body * 1rem
+    background: $color__gray_92p
+    color: $color__gray_18p
+    a
+      color: inherit
+      &:visited
+        color: $color__gray_18p
+  &-info
+    text-align: right
   &-description
     margin: ($font__line-height-body - 1em) 0 0
     a

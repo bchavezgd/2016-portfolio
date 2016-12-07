@@ -1,6 +1,14 @@
 p {
 	@include body-block-margin();
+
 	word-wrap: break-word;
+	.content-area & {
+		@media screen and (min-width: $res__break-point-4) {
+			max-width: 35em;
+			max-width: 55ch;
+			padding-left: 2em * $font__line-height-body;
+		}
+	}
 }
 
 dfn, cite, em, i {

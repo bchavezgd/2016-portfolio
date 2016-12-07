@@ -42,8 +42,8 @@ get_header(); ?>
 			</div><!-- .entry-content -->
 
 		</article><!-- #post-## -->
-		<footer class="entry-footer">
-			<section class="wrapper">
+		<footer class="entry-footer clear">
+			<section class="wrapper ">
 				<div class="entry-meta">
 					<div class="flex flex-row">
 						<?php bchavez_portfolio_posted_on(); ?>

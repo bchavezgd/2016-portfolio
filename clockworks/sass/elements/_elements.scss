@@ -17,7 +17,7 @@ blockquote {
 	margin: 0;
 	// font-weight: 700;
 	background: $color__gray_18p;
-	padding: 1rem 0;
+	padding: 1rem;
 	color: $color__gray_92p;
 	line-height: 1;
 	letter-spacing: 0.04em;
@@ -40,7 +40,7 @@ hr {
 	@include body-block-margin();
 }
 
-@import "header";
+@import "site";
 @import "lists";
 
 img {

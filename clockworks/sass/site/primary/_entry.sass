@@ -1,3 +1,13 @@
+.sticky
+  .entry-meta
+    position: relative
+    .entry-title
+      position: absolute
+      bottom: 3rem * $font__line-height-body
+      padding: 1rem 2rem
+      background-color: $color__background-body
+      right: 0
+
 .entry
   &-header
     +body-block-margin(0.5)
@@ -12,16 +22,18 @@
       text-decoration: none
   &-content
   &-thumbnail-loop
-
+    +aspect-ratio(16, 9)
   &-meta
     +body-block-margin()
 
 
 .entry-footer
   +body-block-margin()
-  +rhythm__padding(1, 0.5, 1, 0.5)
+  // +rhythm__padding(1, 0.5, 1, 0.5)
   background: $color__gray_50p
   color: $color__background-screen
+  > .wrapper
+    +body-block-margin()
   a
     color: inherit
     hyphens: none
@@ -53,7 +65,7 @@
     padding: (0.5em * $font__line-height-body)
     width: 100%
   .entry-header
-    margin: 0
+    margin: 0.25rem
     &-nav
       ul
         padding: 0

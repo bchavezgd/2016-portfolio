@@ -69,7 +69,7 @@ echo '<main id="main" class="site-main" role="main">';
 		</section>
 		<!-- end .wrapper -->
 		<!-- follow me section -->
-		<footer class="entry-footer">
+		<footer class="entry-footer clear">
 			<div class="wrapper">
 				<section class="entry-meta">
 

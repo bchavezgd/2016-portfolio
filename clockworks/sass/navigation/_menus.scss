@@ -23,6 +23,11 @@
 		text-decoration: none;
 		line-height: 1.6;
 		color: white;
+		&:hover, &:focus {
+			background: black;
+			color: lightgray;
+		}
+		border-bottom: 1px solid white;
 	}
 	&.toggled {
 		position: fixed;
@@ -42,13 +47,6 @@
 				}
 			}
 		}
-	}
-	a {
-		&:hover, &:focus {
-			background: black;
-			color: lightgray;
-		}
-		border-bottom: 1px solid white;
 	}
 	ul {
 		ul li:lastchild a {
@@ -86,7 +84,28 @@
 .nav-menu {
 	background: black;
 }
+.portfolio-nav {
+	ul{
+		display: flex;
+		justify-content: flex-start;
+		align-items: baseline;
+		flex-flow: row wrap;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		padding: 0;
+	}
+	a {
+		@include rhythm__padding(0.5, 1, 0.5, 1);
+		border: 1px solid transparent;
 
+		&:hover, &:focus {
+			border: 1px solid black;
+		}
+	}
+
+}
 .dropdown-toggle {
 	text-align: center;
 	font-family: 'FontAwesome';

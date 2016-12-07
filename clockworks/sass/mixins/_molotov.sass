@@ -22,7 +22,7 @@
     width: auto
     padding-top: ($height / $width) * 100%
 
-  > .content
+  > *
     position: absolute
     top: 0
     left: 0
@@ -33,3 +33,6 @@
   margin:
     top: ($f * 1rem) * ($font__line-height-body - 1 )
     bottom: ($f * 1rem) * $font__line-height-body
+
+=body-block-margin-center($f: 1)
+  margin: (($f * 1rem) * ($font__line-height-body - 1 )) auto (($f * 1rem) * $font__line-height-body) auto
