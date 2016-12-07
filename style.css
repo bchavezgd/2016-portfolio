@@ -1,0 +1,2169 @@
+/*!
+Theme Name: bchavez 2017
+Theme URI: http://underscores.me/
+Author: Brian Chavez
+Author URI: http://www.briandesignworks.com
+Description: responsive portfolio theme
+Version: 0.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bchavez_portfolio
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+bchavez is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Flex Classes
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/variables-site/_structure.scss */
+#portfolio, .project {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+  /* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/variables-site/_structure.scss */
+  #portfolio, .project {
+    width: 28em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/variables-site/_structure.scss */
+  #portfolio, .project {
+    width: 30em;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  /* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/variables-site/_structure.scss */
+  #portfolio, .project {
+    width: 40em;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  /* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/variables-site/_structure.scss */
+  #portfolio, .project {
+    width: 50em;
+  }
+}
+
+/* line 28, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/variables-site/_structure.scss */
+#portfolio, .project {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 7, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 26, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 34, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 39, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 44, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 48, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 53, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 57, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 62, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 66, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+h1, .site-title {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 71, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 76, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 80, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 88, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 92, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 96, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 100, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 104, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 108, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 113, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 117, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 125, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 135, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/* line 139, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 144, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 152, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 157, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 163, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/* line 167, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 173, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 178, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+/* line 183, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 188, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 194, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 199, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 203, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 207, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 212, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_typography.scss */
+body,
+button,
+input,
+select,
+textarea {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  color: #222222;
+  font-family: "proxima nova", "source sans pro", helvetica, arial, roboto, sans-serif;
+  font-size: 14px;
+  font-size: calc(14px + 0.5vw);
+  line-height: 1.6;
+}
+
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h1, .site-title, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.65px;
+  margin: 0.6em 0 0;
+  font-family: brandon-grotesque, "proxima nova", "source sans pro", helvetica, arial, roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.65px;
+  clear: both;
+}
+
+/* line 9, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h1, .site-title {
+  font-size: 24.5px;
+  font-size: 1.75rem;
+  line-height: 1.057692308;
+}
+
+/* line 13, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h2 {
+  font-size: 22.75px;
+  font-size: 1.625rem;
+  line-height: 1.022727273;
+}
+
+/* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h3 {
+  font-size: 21px;
+  font-size: 1.5rem;
+  line-height: 1.022727273;
+}
+
+/* line 21, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h4 {
+  font-size: 19.25px;
+  font-size: 1.375rem;
+  line-height: 1.25;
+}
+
+/* line 25, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h5 {
+  font-size: 17.5px;
+  font-size: 1.25rem;
+  line-height: 1.111111111;
+}
+
+/* line 29, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+h6 {
+  font-size: 15.75px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_headings.sass */
+.header-underline {
+  display: inline-block;
+  border-bottom: 0.125em solid #790000;
+  padding-right: 1em;
+  padding-right: 1ch;
+  padding-bottom: 0.125rem;
+}
+
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+p {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 60em) {
+  /* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+  .content-area p {
+    max-width: 35em;
+    max-width: 55ch;
+    padding-left: 3.2em;
+  }
+}
+
+/* line 14, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+/* line 18, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+blockquote, address {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 22, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+pre {
+  background: #414040;
+  font-family: "source code pro", Courier, monospace;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #d1d1d1;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.5em;
+}
+
+/* line 34, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+code, kbd, tt, var {
+  font-family: "source code pro", Courier, monospace;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+}
+
+/* line 39, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 44, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 49, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+.big {
+  font-size: 17.5px;
+  font-size: 1.25rem;
+}
+
+/* line 52, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/typography/_copy.scss */
+.small {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+blockquote {
+  font-size: 1.125em;
+  margin: 0;
+  background: #d1d1d1;
+  padding: 1rem;
+  color: #141414;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 27, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 30, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 36, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 3.5px;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 3, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-header {
+  padding: 0.8em;
+  background: #ffffff;
+}
+
+@media screen and (min-width: 50em) {
+  /* line 6, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+  .site-header > .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-header a {
+  text-decoration: none;
+}
+
+/* line 13, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-branding {
+  -ms-flex: 1 0 33%;
+      flex: 1 0 33%;
+}
+
+/* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-footer {
+  clear: both;
+  width: 100%;
+  padding: 1.6rem;
+  background: #141414;
+  color: #d1d1d1;
+}
+
+/* line 23, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-footer a {
+  color: inherit;
+}
+
+/* line 25, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-footer a:visited {
+  color: #d1d1d1;
+}
+
+/* line 27, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-info {
+  text-align: right;
+}
+
+/* line 29, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-description {
+  margin: 0.6em 0 0;
+}
+
+/* line 31, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-description a {
+  color: #d1d1d1;
+}
+
+/* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-description a:visited {
+  font-weight: 200;
+}
+
+/* line 35, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-description a:hover, .site-description a:focus, .site-description a:active {
+  color: #ffffff;
+}
+
+/* line 39, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-description a:focus {
+  outline: thin dotted;
+}
+
+/* line 41, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_site.sass */
+.site-description a:hover, .site-description a:active {
+  outline: 0;
+}
+
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_lists.scss */
+ul, ol {
+  margin: 0.25em 0 1.25em;
+  padding: 0 0 0 1em;
+}
+
+/* line 6, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_lists.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 10, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_lists.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 14, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+/* line 20, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_lists.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_lists.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 46, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 50, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_elements.scss */
+figure {
+  margin: 0;
+}
+
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/elements/_tables.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-default {
+  background-color: #777777;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-default:hover, .btn-default:active, .btn-default:focus {
+  background: #919191;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-primary {
+  background-color: #20202a;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background: #363647;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-success {
+  background-color: #5cb85c;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+  background: #80c780;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-info {
+  background-color: #17bee5;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-info:hover, .btn-info:active, .btn-info:focus {
+  background: #43ccec;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-warning {
+  background-color: #e0cc00;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+  background: #ffea14;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-danger {
+  background-color: #ad114c;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus {
+  background: #db1660;
+}
+
+/* line 21, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_buttons.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn {
+  font-size: 10.5px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+  border: 0;
+}
+
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_fields.scss */
+form div {
+  margin-bottom: 1.6rem;
+}
+
+/* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_fields.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  background: transparent;
+  color: #666;
+  border: 0;
+  border-bottom: 2px solid #141414;
+}
+
+/* line 28, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_fields.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+/* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_fields.scss */
+select {
+  border: 1px solid #ccc;
+}
+
+/* line 37, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_fields.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  padding: 0.25em;
+}
+
+/* line 55, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/forms/_fields.scss */
+textarea {
+  padding-left: 0.25em;
+  width: 100%;
+  border: 2px solid;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_links.scss */
+a {
+  color: #222222;
+  word-wrap: normal;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+/* line 6, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_links.scss */
+a:visited {
+  color: #322;
+}
+
+/* line 9, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_links.scss */
+a:hover, a:focus, a:active {
+  color: #322;
+}
+
+/* line 14, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_links.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_links.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation {
+  clear: both;
+  display: block;
+}
+
+/* line 6, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 10, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation ul ul {
+  display: none;
+  margin-left: 0.8em;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation li {
+  position: relative;
+}
+
+/* line 18, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation a {
+  position: relative;
+  display: block;
+  padding: 0.8em 1em;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.6;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+/* line 26, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation a:hover, .main-navigation a:focus {
+  background: black;
+  color: lightgray;
+}
+
+/* line 32, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 1.6em;
+  z-index: 50;
+}
+
+/* line 37, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul {
+  max-height: calc(100vh - 8em);
+  overflow-y: auto;
+}
+
+/* line 40, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul ul {
+  display: none;
+}
+
+/* line 42, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul ul.toggled-on {
+  display: block;
+}
+
+/* line 44, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul ul.toggled-on > ul {
+  display: block;
+}
+
+/* line 52, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation ul ul li:lastchild a {
+  border-bottom: 1px solid white;
+}
+
+/* line 55, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation ul li:last-child a {
+  border-bottom: none;
+}
+
+/* line 58, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation ul .toggled-on {
+  display: block;
+}
+
+/* line 62, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation li {
+  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  position: relative;
+}
+
+/* line 67, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a, .main-navigation .current_page_item > a, .main-navigation .current_page_ancestor > a {
+  font-weight: 700;
+}
+
+/* line 71, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation .nav-menu > ul > li:first-child, .main-navigation .nav-menu > li:first-child {
+  border-top: 0;
+}
+
+/* line 75, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation .menu-item-has-children > a, .main-navigation .page_item_has_children > a {
+  padding-right: 48px;
+}
+
+/* line 80, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.no-js .main-navigation ul ul {
+  display: block;
+}
+
+/* line 84, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.nav-menu {
+  background: black;
+}
+
+/* line 88, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.portfolio-nav ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  padding: 0;
+}
+
+/* line 95, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.portfolio-nav li {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 99, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.portfolio-nav a {
+  padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+  border: 1px solid transparent;
+}
+
+/* line 103, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.portfolio-nav a:hover, .portfolio-nav a:focus {
+  border: 1px solid black;
+}
+
+/* line 109, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.dropdown-toggle {
+  text-align: center;
+  font-family: 'FontAwesome';
+  background-color: black;
+  border: 0;
+  box-sizing: content-box;
+  content: "";
+  padding: 0;
+  position: absolute;
+  text-transform: lowercase;
+  /* Stop screen readers to read the text as capital letters */
+  top: 1em;
+  right: 0.6em;
+  width: 2em;
+  height: 2em;
+}
+
+/* line 124, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.dropdown-toggle:after {
+  color: white;
+  content: "\f078";
+  position: relative;
+  top: 0;
+  left: 1px;
+  width: 42px;
+}
+
+/* line 132, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.dropdown-toggle:hover {
+  background-color: black;
+}
+
+/* line 135, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.dropdown-toggle:focus {
+  background-color: black;
+  outline: 1px solid #c1c1c1;
+  outline: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+/* line 140, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.dropdown-toggle.toggle-on:after {
+  content: "\f077";
+}
+
+/* Small menu. */
+/* line 147, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.menu-toggle, .main-navigation.toggled ul {
+  display: block;
+}
+
+/* line 151, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.menu-toggle {
+  position: fixed;
+  z-index: 100;
+  bottom: 1em;
+  transition: all ease-out 250ms;
+}
+
+/* line 156, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.menu-toggle.hide {
+  bottom: -2.5em;
+}
+
+/* line 161, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.toggled .menu-toggle.hide {
+  bottom: 1em;
+}
+
+/* line 166, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.menu-toggle:hover, .menu-toggle:focus {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 50em) {
+  /* line 172, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation {
+    width: 100%;
+    -ms-flex: 2 0 66%;
+        flex: 2 0 66%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+  /* line 178, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .menu-toggle {
+    display: none;
+  }
+  /* line 181, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul {
+    display: block;
+  }
+}
+
+/* Hovering menu */
+/* line 188, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* line 193, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul {
+  max-height: calc(100vh - 8em);
+  overflow-y: auto;
+}
+
+/* line 196, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul ul {
+  display: none;
+}
+
+/* line 198, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul ul.toggled-on {
+  display: block;
+}
+
+/* line 200, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.main-navigation.toggled ul ul.toggled-on > ul {
+  display: block;
+}
+
+/* Horizontal menu on wide screens */
+@media screen and (min-width: 50em) {
+  /* Position the menu in the header */
+  /* line 211, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation {
+    position: relative;
+    min-height: 3.5em;
+    max-width: 58em;
+    margin: 0 auto;
+    color: black;
+  }
+  /* line 217, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation.toggled {
+    position: relative;
+    min-height: 3.5em;
+    max-width: 58em;
+    margin: 0 auto;
+    color: black;
+  }
+  /* line 225, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .nav-menu {
+    margin: 0;
+    padding: .3em 0 0 0;
+    background-color: transparent;
+  }
+  /* line 231, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul {
+    max-height: none;
+    padding-left: 0;
+    text-align: center;
+  }
+  /* line 236, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation.toggled ul {
+    max-height: none;
+    padding-left: 0;
+    text-align: center;
+    overflow-y: visible;
+  }
+  /* line 242, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation li {
+    display: inline-block;
+    border: none;
+  }
+  /* line 246, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul ul {
+    outline: 1px solid #333;
+  }
+  /* line 249, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation li li {
+    display: block;
+    text-align: left;
+  }
+  /* line 253, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation a {
+    border-bottom: none;
+    color: inherit;
+  }
+  /* line 257, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul ul li:last-child a {
+    color: white;
+  }
+  /* line 261, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation a:hover, .main-navigation a:focus {
+    background: transparent;
+    color: black;
+    text-decoration: underline;
+    outline: solid 1px #b3b3b3;
+  }
+  /* line 269, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation li li a:hover, .main-navigation li li a:focus {
+    color: #000;
+    text-decoration: underline;
+  }
+  /* line 276, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul ul.toggled-on {
+    position: absolute;
+    width: 12em;
+    display: block;
+    z-index: 10;
+    margin-left: 0;
+    background: #000;
+  }
+  /* line 285, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul ul ul.toggled-on {
+    position: relative;
+  }
+  /* line 288, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .main-navigation ul ul ul a {
+    padding-left: 2em;
+  }
+  /* Display the menu items in a horizontal order */
+  /* Add an outline to the drop-down menus */
+  /* Left-align drop-down menu items */
+  /* Add an outline on hovered and focused menu items */
+  /* Create hover and focus contrast on drop-down items */
+  /* Position drop-down menus absolutely */
+  /* Indent 3rd level drop-down menus */
+  /* Simplify the drop-down toggle */
+  /* line 302, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+  .dropdown-toggle {
+    border: none;
+  }
+}
+
+/* line 314, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+
+/* line 320, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+/* line 325, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/navigation/_menus.scss */
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_accessibility.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* line 9, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_accessibility.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #790000;
+  display: block;
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+/* line 30, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_accessibility.scss */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Flex classes
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_flex.sass */
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 3, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_flex.sass */
+.flex-row {
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+/* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_flex.sass */
+.flex-column {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+/* line 7, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_flex.sass */
+.flex-just-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* line 9, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_flex.sass */
+.flex-just-between {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_flex.sass */
+.flex-just-center {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_alignments.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 7, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_alignments.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 13, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_alignments.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_clearings.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 16, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_clearings.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+  /**
+		*  Make sure select elements fit in widgets.
+		*/
+}
+
+/* line 6, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget select {
+  max-width: 100%;
+}
+
+/* line 8, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget-title, .widgettitle {
+  margin-bottom: 0.4rem;
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget-site-footer-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 16, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget-site-footer-container ul {
+  padding: 0;
+}
+
+/* line 20, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget_calendar {
+  max-width: 300px;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 25, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget_calendar th, .widget_calendar td {
+  text-align: right;
+}
+
+/* line 27, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+.widget_calendar tfoot {
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 31, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/secondary/_widgets.sass */
+  .widget-site-footer-container {
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+  }
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# layout
+--------------------------------------------------------------*/
+/* line 3, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+.content-margin {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+@media screen and (min-width: 30em) {
+  /* line 3, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .content-margin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 13, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+.site-content .widget-area {
+  overflow: hidden;
+  margin: 0 1.6em 1.6em;
+}
+
+/* line 18, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+.site-footer {
+  clear: both;
+  width: 100%;
+  padding: 1.6rem;
+  background: #141414;
+  color: #d1d1d1;
+}
+
+/* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+.site-footer a {
+  color: inherit;
+}
+
+/* line 26, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+.site-footer a:visited {
+  color: #d1d1d1;
+}
+
+/* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+.wrapper {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+  /* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .wrapper {
+    width: 28em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .wrapper {
+    width: 30em;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  /* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .wrapper {
+    width: 40em;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  /* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .wrapper {
+    width: 50em;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  /* line 33, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  /* line 39, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/layout/_content-sidebar.scss */
+  .site-content {
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+/**
+  * Full width template
+  * no sidebar
+  */
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 2, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.sticky .entry-meta {
+  position: relative;
+}
+
+/* line 4, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.sticky .entry-meta .entry-title {
+  position: absolute;
+  bottom: 4.8rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  right: 0;
+}
+
+/* line 12, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-header, .project-header {
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 0;
+  max-height: 80vw;
+}
+
+/* line 18, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-title {
+  font-size: 17.5px;
+  font-size: 1.25rem;
+}
+
+/* line 20, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-title a {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  text-decoration: none;
+}
+
+/* line 24, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-thumbnail-loop {
+  position: relative;
+}
+
+/* line 19, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/mixins/_molotov.sass */
+.entry-thumbnail-loop:before {
+  display: block;
+  content: "";
+  width: auto;
+  padding-top: 56.25%;
+}
+
+/* line 25, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/mixins/_molotov.sass */
+.entry-thumbnail-loop > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 26, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-meta {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 30, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+  background: gray;
+  color: #f1f1f1;
+}
+
+/* line 35, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer > .wrapper {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 37, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer a {
+  color: inherit;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+/* line 40, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer .tags-links, .entry-footer .cat-links {
+  text-transform: capitalize;
+}
+
+/* line 43, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer .entry-meta {
+  font-size: 12.25px;
+  font-size: 0.875rem;
+  margin-bottom: 1.6rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* line 47, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer .entry-meta > .flex {
+  margin-bottom: 1.6rem;
+}
+
+/* line 49, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer .entry-meta > span {
+  padding: 0 2ch;
+}
+
+/* line 51, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer .entry-meta > span:first-of-type {
+  padding-left: 0;
+}
+
+/* line 53, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.entry-footer .entry-meta > span:last-of-type {
+  padding-right: 0;
+}
+
+/* line 58, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.home article {
+  line-height: 0;
+}
+
+/* line 60, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.home h2.entry-title {
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.8em;
+  width: 100%;
+}
+
+/* line 67, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.home .entry-header, .home .project-header {
+  margin: 0.25rem;
+}
+
+/* line 70, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_entry.sass */
+.home .entry-header-nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 2, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+#portfolio {
+  margin-bottom: 3.2rem;
+}
+
+/* line 15, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.project-gallery figure, .gallery figure {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.project-gallery figure img, .gallery figure img {
+  margin: 0;
+}
+
+/* line 19, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.project-gallery img, .gallery img {
+  display: block;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 25, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+  #portfolio {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  /* line 29, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+  #portfolio article.portfolio {
+    float: left;
+    max-width: 50%;
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  /* line 37, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+  .project-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  /* line 41, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+  .project-description {
+    float: left;
+    -ms-flex: 4 0 15em;
+        flex: 4 0 15em;
+  }
+  /* line 45, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+  .project-gallery, .gallery {
+    float: left;
+    max-width: 60%;
+    -ms-flex: 6 0 19em;
+        flex: 6 0 19em;
+    padding-left: 1.6em;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  /* line 53, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+  #portfolio article.portfolio {
+    max-width: 33%;
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+/**
+ * font awsome styling
+ */
+/* line 65, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.fa-title {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 67, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.fa-wrapper {
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 72, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.fa-wrapper .fa {
+  padding: 0 0.8rem;
+}
+
+/* line 74, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.fa-wrapper .fa:first-child {
+  padding-left: 0;
+}
+
+/* line 76, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.fa-wrapper .fa:last-child {
+  padding-right: 0;
+}
+
+/* line 78, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_project.sass */
+.fa-wrapper .fa:hover, .fa-wrapper .fa:active {
+  color: #790000;
+}
+
+/* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.byline,
+.updated:not(.published) {
+  display: block;
+}
+
+/* line 10, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.single .byline, .group-blog .byline {
+  display: inline;
+}
+
+/* line 14, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.page-header {
+  margin-bottom: 1.6rem;
+}
+
+/* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.page-content, .entry-summary {
+  max-width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 30em) {
+  /* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+  .page-content, .entry-summary {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  /* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+  .page-content, .entry-summary {
+    width: 28em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+  .page-content, .entry-summary {
+    width: 30em;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  /* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+  .page-content, .entry-summary {
+    width: 40em;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  /* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+  .page-content, .entry-summary {
+    width: 50em;
+  }
+}
+
+/* line 23, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.page-links {
+  clear: both;
+  margin-bottom: 1.6rem;
+}
+
+/* line 28, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.post {
+  margin-bottom: 4.8rem;
+}
+
+/* line 32, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.single .content-area {
+  margin: 0;
+}
+
+/* line 37, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+/* line 19, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/mixins/_molotov.sass */
+.hero:before {
+  display: block;
+  content: "";
+  width: auto;
+  padding-top: 56.25%;
+}
+
+/* line 25, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/mixins/_molotov.sass */
+.hero > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 42, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_posts-and-pages.scss */
+.search-results article.hentry {
+  margin-bottom: 3.2rem;
+}
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_asides.scss */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 4, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_comments.sass */
+.comment-list {
+  margin: 0;
+  margin-bottom: 3.2rem;
+}
+
+/* line 7, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_comments.sass */
+.bypostauthor {
+  display: block;
+}
+
+/* line 10, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_comments.sass */
+.comments-area {
+  margin-bottom: 1.6rem;
+}
+
+/* line 12, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_comments.sass */
+.comments-area ol.comment-list {
+  padding: 0 0 0 1.6em;
+}
+
+/* line 14, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/site/primary/_comments.sass */
+.comments-title {
+  margin-bottom: 1.6rem;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 2, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_infinite-scroll.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/modules/_infinite-scroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_media.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_media.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_captions.scss */
+.wp-caption {
+  margin-bottom: 1.6em;
+  max-width: 100%;
+}
+
+/* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_captions.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 9, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_captions.scss */
+.wp-caption .wp-caption-text {
+  margin-top: 0.45rem;
+  margin-bottom: 1.2rem;
+}
+
+/* line 14, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_captions.scss */
+.wp-caption-text {
+  margin-left: 1.6em;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 5, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  margin-top: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* line 12, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+/* line 17, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+/* line 22, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+/* line 27, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+/* line 32, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+  -ms-flex-preferred-size: 16.66%;
+      flex-basis: 16.66%;
+}
+
+/* line 37, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+  -ms-flex-preferred-size: 14.28%;
+      flex-basis: 14.28%;
+}
+
+/* line 42, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+  -ms-flex-preferred-size: 12.5%;
+      flex-basis: 12.5%;
+}
+
+/* line 47, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+  -ms-flex-preferred-size: 11.11%;
+      flex-basis: 11.11%;
+}
+
+/* line 53, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_galleries.scss */
+.gallery-caption {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+## images
+--------------------------------------------------------------*/
+/* line 1, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_images.sass */
+img.featured-image {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+/* line 6, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_images.sass */
+.box-shadow {
+  box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.8);
+}
+
+/* line 9, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_images.sass */
+.gray {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+/* line 11, /Users/Brian/htdocs/wp-content/themes/bchavez_portfolio/clockworks/sass/media/_images.sass */
+.gray:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  transition: all 200ms;
+}
