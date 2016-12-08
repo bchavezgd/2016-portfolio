@@ -161,7 +161,7 @@ function bchavez_portfolio_scripts() {
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'bchavez_portfolio' ) . '</span>',
 	) );
 
-	wp_enqueue_script( 'bchavez_portfolio-typekit', get_template_directory_uri() . '/js/typekit.js', [],'161102' );
+	wp_enqueue_script( 'bchavez_portfolio-typekit', get_template_directory_uri() . '/js/typekit.js', array(),'161102' );
 
 	wp_enqueue_script( 'bchavez_portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

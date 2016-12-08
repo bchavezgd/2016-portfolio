@@ -64,16 +64,22 @@
 
 .fa-title
 	+body-block-margin()
+	margin-right: 1.6rem
 .fa-wrapper
 	+body-block-margin()
+	+font_size(1.625)
 	display: flex
 	flex-flow: row wrap
-	justify-content: space-between
+	justify-content: flex-start
+	align-items: baseline
+
 	.fa
-		padding: 0 (0.5rem * $font__line-height-body)
+		// padding: 0 (0.5rem * $font__line-height-body)
+		margin-right: 0.5em * $font__line-height-body
 		&:first-child
-			padding-left: 0
-		&:last-child
-			padding-right: 0
-		&:hover, &:active
+			margin-left: 0
+			// padding-left: 0
+		// &:last-child
+			// padding-right: 0
+		&:hover, &:focus, &:active
 			color: $color__text-screen

@@ -56,10 +56,10 @@ echo '<main id="main" class="site-main" role="main">';
 			if( $query->have_posts() ) {
 				while ( $query->have_posts() ) {
 					$query->the_post();
-
-					the_title('<h2 class="fa-title header-underline content-margin">','</h2>');
 					echo '<div class="fa-wrapper content-margin">';
-					the_content();
+						the_title('<h2 class="fa-title header-underline">','</h2>');
+
+						the_content();
 					echo '</div><!--end fa-wrapper -->';
 				};
 			};

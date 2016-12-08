@@ -19,7 +19,7 @@
 					?>
 					<a href="<?php the_permalink(); ?>" rel="bookmark">
 						<?php
-					the_post_thumbnail('loop', ['class'=>'entry-thumbnail-loop ']);
+					the_post_thumbnail('loop', array('class'=>'entry-thumbnail-loop '));
 					the_title( '<h2 class="entry-title">', '</h2>' );
 					echo "</a>";
 				} else {

@@ -61,8 +61,9 @@ Still need adjust styling, text is to big even for a small menu.
 - modified content filter, `wpautop();` was not needed and detrimental to *static_pages,* and *portfolio* CPTs.
 - integrated Better Font Awesome in to theme, with shortcode support in text widgets.
 
+## 161207
+- uploaded to wp site for testing and debugging. 
+
 ## TODO
 
-- tweak menu and site header to fit more appropriately.
 - add custom logo functionality.
-- increase link target on `front-page.php`.
