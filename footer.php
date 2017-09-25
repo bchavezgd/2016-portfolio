@@ -36,7 +36,8 @@
 				 <?php } ?>
 			</div>
 			<div class="site-info small">
-				<?php printf( esc_html__( '&copy; %2$s %1$s', 'bchavez_portfolio' ), '<a href="https://www.briandesignworks.com" rel="designer">Brian Chavez</a>', get_the_date('Y') ); ?>
+				<a href="<?php home_url(); ?>" rel="designer">Brian Chavez</a>
+				<?php printf( esc_html__( '&copy; %s', 'bchavez_portfolio' ), get_the_date('Y') ); ?>
 			</div>
 			<!-- .site-info -->
 		</section>

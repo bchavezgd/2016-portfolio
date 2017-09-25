@@ -118,10 +118,9 @@ function bchavez_portfolio_categories_list() {
 
 
 	if ( 'portfolio' === get_post_type() ) {
-		global $post;
-		$project_type_list = get_the_term_list($post->ID, 'project_type');
+		$project_type_list = get_the_term_list(get_the_ID(), 'project_type', ': ', ', ', '.' );
 		if ( $project_type_list && bchavez_portfolio_categorized_blog() ) {
-			printf( '<div class="cat-links">' . esc_html__( 'Project Type: %1$s', 'bchavez_portfolio' ) . '</div>', $project_type_list); // WPCS: XSS OK.
+			printf( '<div class="cat-links">' . esc_html__( 'Project Type%1$s', 'bchavez_portfolio' ) . '</div>', $project_type_list); // WPCS: XSS OK.
 		}
 	}
 }
@@ -137,9 +136,10 @@ function bchavez_portfolio_tag_list() {
 	if( 'portfolio' === get_post_type() ) {
 		{
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bchavez_portfolio' ) );
-			if ( $tags_list ) {
-				printf( '<div class="tags-links">' . esc_html__( 'Role: %1$s,', 'bchavez_portfolio' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			// $tags_list = get_the_tag_list( '', esc_html__( ', ', 'bchavez_portfolio' ) );
+			$roll_list = get_the_term_list(get_the_ID(), 'roles', ': ', ', ', '.' ) ;
+			if ( $roll_list ) {
+				printf( '<div class="tags-links">' . esc_html__( 'Roles%1$s', 'bchavez_portfolio' ) . '</div>', $roll_list); // WPCS: XSS OK.
 			}
 		}
 	}

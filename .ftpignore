@@ -1,0 +1,7 @@
+.gitignore
+.jscsrc
+.jshintignore
+.ftpconfig
+.ftpignore
+/clockworks/
+/node_modules/

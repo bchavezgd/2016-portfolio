@@ -115,7 +115,38 @@ add_action( 'init', 'bchavez_portfolio_static', 0 );
 
 // Register Custom Taxonomy
 function custom_taxonomy() {
-
+	$labels = array(
+		'name'                       => _x( 'Company', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Company', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Company', 'text_domain' ),
+		'all_items'                  => __( 'All Companies', 'text_domain' ),
+		'parent_item'                => __( 'Parent Company', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Company:', 'text_domain' ),
+		'new_item_name'              => __( 'New Company Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Company', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Company', 'text_domain' ),
+		'update_item'                => __( 'Update Company', 'text_domain' ),
+		'view_item'                  => __( 'View Company', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate Companies with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Companies', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular Companies', 'text_domain' ),
+		'search_items'               => __( 'Search Companies', 'text_domain' ),
+		'not_found'                  => __( 'Company Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'Companies list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Companies list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+	);
+	register_taxonomy( 'company', array( 'portfolio' ), $args );
 	$labels = array(
 		'name'                       => _x( 'Roles', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'Role', 'Taxonomy Singular Name', 'text_domain' ),
